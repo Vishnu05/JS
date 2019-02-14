@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="">
+    <script src=""></script>
+
+    <script>
+        let fn = document.getElementById = 'fn';
+        console.log(fn)
+        function fun() {
+            if (fn != null) {
+                return true;
+            } else {
+                return fun();
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div>
+            <input type="text" id='fn' placeholder="First name">
+        </div>
+
+        <div>
+            <input type="text" id='ln' placeholder="Last name">
+        </div>
+        <div>
+            <input type="text" id='un' placeholder="Username">
+        </div>
+        <div>
+            <input type="password" id='pwd' placeholder="Password">
+        </div>
+        <div>
+            <input type="password" id='cnf' placeholder="Confirm password">
+        </div>
+        <div>
+            <input type="email" id='em' placeholder="email">
+        </div>
+        <div>
+            <input type="submit" onclick="fun()" value="Submit">
+        </div>
+    </div>
+
+
+</body>
+
+</html>
