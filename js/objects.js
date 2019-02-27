@@ -109,9 +109,9 @@ console.log(arr[3]())
 
 arr.pop()
 
-arr.push('Adding a element'); 
+arr.push('Adding a element');
 //alert(arr) 
 
-let str='hello javascript i"m going to do a serach'
+let str = 'hello javascript i"m going to do a serach'
 
-console.log('indexOf method : '+str.indexOf('e',2))
+console.log('indexOf method : ' + str.indexOf('e', 2))

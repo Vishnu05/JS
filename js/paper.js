@@ -29,4 +29,7 @@ num=123
 
 console.log(`rock paper "game"${num}`+"  "+typeof a)
  
- console.log()
+let df;
+ console.log(df)
+
+ setTimeout(200)
