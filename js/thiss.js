@@ -76,3 +76,8 @@ document.write('DOM '+navigator.userAgent+" ||| \n : "+navigator.platform + navi
 document.body.style.background = ''
 
 console.log(location)
+
+console.log(document.body)
+
+//alert('hello'=='hello')
+

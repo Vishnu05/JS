@@ -7,24 +7,29 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="">
-    <script src=""></script>
+
+    <script src="/js/signup.js"></script>
 
     <script>
-        let fn = document.getElementById = 'fn';
-        console.log(fn)
-        function fun() {
-            if (fn != null) {
-                return true;
-            } else {
-                return fun();
-            }
 
+        let fnn = document.getElementById('fn');
+
+        document.write(fnn)
+
+        function fun() {
+            if (fnn === null) {
+                document.getElementById('fun')
+            }
         }
     </script>
 </head>
 
 <body>
 
+
+    <script>
+        console.log(document.body.parentNode === document.documentElement)
+   // console.log(document.body)</script>
     <div class="container">
         <div>
             <input type="text" id='fn' placeholder="First name">
@@ -50,7 +55,36 @@
         </div>
     </div>
 
+    <div>
+        <p id="el"> Hey Hello!</p>
+    </div>
 
+    <script>
+        for (let a of document.body.children) {
+            console.log(a)
+            //alert(a)
+        }
+    </script>
 </body>
 
 </html>
+<!-- <script>
+    console.log(document.body)
+</script> -->
+
+<script>
+    // alert(el)
+    console.log()
+    let els = document.getElementById('el');
+    els.style.color = 'blue';
+
+    let tags = document.getElementsByTagName('div') // collection of tag
+
+    for (let i of tags) {
+      //  console.log(i)
+    }
+
+    let query = document
+    console.log(query)
+
+</script>
