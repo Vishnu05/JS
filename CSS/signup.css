@@ -1,0 +1,14 @@
+
+container{
+    width:80px;
+    height: 80px;
+    -webkit-animation: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.fn-cl{
+    width:150px;
+}
+
+.pp{
+    color:black;
+}

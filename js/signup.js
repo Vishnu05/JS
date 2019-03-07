@@ -9,7 +9,6 @@ console.log(document.body)
 
 function native(){
 //  return "Native function"
-     
 }
 
 console.log(native())

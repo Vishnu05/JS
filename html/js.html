@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href=" ">
     <!-- <script src="/js/ob.js"></script> -->
-    <script src="/js/thiss.js">
+    <script src="/js/map.js">
     </script>
     <script>
         let aaa = document.getElementById('cw')
@@ -20,11 +20,8 @@
         function op() {
             as.close();
         }
-
-        let para=document.getElementById('ch')
-        para.style.background='blue'
-       
     </script>
+
 </head>
 
 <body>
@@ -32,10 +29,19 @@
         <input type="button" value="Close : - " onclick="cw()">
         <input type="button" value="Open : - " onclick="op()">
         <a href="http://google.com">Google</a>
-        
+
     </div>
 
-    <div id='ch'> <p >Hey Dom,take care of the color</p></div>
+    <div>
+        <p id='chd'>Hey Dom,take care of the color</p>
+    </div>
 </body>
 
 </html>
+<script>
+    // style dosen't work when script is inside the document
+    let ab = document.getElementById('chd');
+    ab.style.color = 'blue';
+    document.body.style.background='#19d2b1'
+    
+</script>

@@ -1,0 +1,12 @@
+
+.pp{
+    color:chocolate;
+    width:150px;
+    font-display: initial;
+    font-size: 40px;
+    font-weight: 300;
+    height: 190;
+}
+body{
+    background-color:gray;
+}
