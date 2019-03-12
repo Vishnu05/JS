@@ -9,27 +9,29 @@ let paper = function () {
 }
 
 let a = paper;
- 
+
 console.log(a);
 
-function con(user){
+function con(user) {
 
-    if(user===paper || user===rock){
+    if (user === paper || user === rock) {
 
     }
 }
 
-let $='234'
+let $ = '234'
 console.log($)
- $=1;
+$ = 1;
 console.log($)
 
-num=123
- 
+num = 123
 
-console.log(`rock paper "game"${num}`+"  "+typeof a)
- 
+
+console.log(`rock paper "game"${num}` + "  " + typeof a)
+
 let df;
- console.log(df)
+console.log(df)
 
- setTimeout(200)
+setTimeout(200)
+
+inputs

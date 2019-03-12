@@ -40,7 +40,8 @@ for (let a of pam.keys()) {
 for (let a of pam.values()) {
     console.log(a)
 }
-
+/* for of iterates values
+in iterates key */
 //console.log('Map enteries : '+pam.entries()
 for (let a of pam.entries()) { // iterates both (value and key)
     console.log(" Entries : " + a)
