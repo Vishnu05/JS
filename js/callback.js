@@ -7,12 +7,15 @@ function func() {
     return console.log('alright then')
 }
 
+// arrow function
 let fus = (a, b) => a + b;
 
 console.log(fus(1, 2))
 
-let a = () => console.log('alert(12)') // arrow function
+let a = () => console.log('alert(12)') 
 a()
+
+console.log()
 
 strict()
 function strict() {

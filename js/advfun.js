@@ -33,6 +33,7 @@ function add(x, y) {
     return x + y;
 }
 
+
 console.log(add(1, 2, 3, 4, 5))
 
 //Rest parameters...
@@ -106,3 +107,98 @@ console.log(typeof jef)
 //     return 'hey function call';
 // }
 
+ofs = 'no declaration'
+console.log(ofs)
+
+function nested(fn, ln) {
+
+    function getName() {
+        return `${fn}${ln}`
+    }//l̥l̥l̥l̥l̥l̥l̥l̥
+    console.log('Hi...' + getName())
+    console.log('Bye...' + getName())
+}
+
+nested('Vishnu', 'Thamizharasan')
+
+//lexical environment 
+/**
+ * it is all about scope.?
+ */
+
+//hoisting
+gh = 'hoisting ex'
+console.log(gh)
+function hoist(a) {
+    return a;
+}
+console.log('functoin call : ' + hoist(gh))
+var gh; //if we change to let the variable becames undefined 
+
+//anonymous function ?
+(function () {
+    console.log('lexical function ')
+})();
+console.log();
+
+(function () {
+    console.log('lexical function example: ')
+})();
+
+var xx = 1
+{
+    xx = 2
+    {
+        xx = 3 // xx check the latestest progressive
+        console.log(xx)
+    }
+}
+
+function makeAdder(x) {
+    return function (y) {
+        // return function (c) {
+        return x + y
+        //}
+    }
+}
+
+let add1 = makeAdder(5)
+let add2 = makeAdder(10)
+
+console.log(add1(3))
+console.log(add2(2))
+
+//callback function
+
+let adds = function (x, y) {
+    return x + y
+}
+let mul = function (x, y) {
+    return x * y
+}
+
+let display = function (a, b, fun) {
+    console.log('function executing')
+    
+    return fun
+}
+
+console.log(display(1,2,adds())) 
+
+// js async function call
+function one() {
+    setTimeout(function () {
+        console.log('first call 1')
+    }, 1000)
+}
+
+function two() {
+    console.log('second call 2')
+}
+
+one()
+two() 
+
+//ee+t () => return 'd' 
+
+ 
