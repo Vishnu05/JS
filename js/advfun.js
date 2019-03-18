@@ -127,6 +127,10 @@ nested('Vishnu', 'Thamizharasan')
  */
 
 //hoisting
+/**
+ * In JavaScript, a variable can be declared after it has been used.
+ * In other words; a variable can be used before it has been declared.
+ */
 gh = 'hoisting ex'
 console.log(gh)
 function hoist(a) {
@@ -179,11 +183,21 @@ let mul = function (x, y) {
 
 let display = function (a, b, fun) {
     console.log('function executing')
-    
+
     return fun
 }
 
-console.log(display(1,2,adds())) 
+console.log(display(1, 2, adds()))
+
+
+function obj() {
+    return 'JS function'
+}
+
+let funName = function () {
+    return obj()  //call back function
+}
+console.log(funName())
 
 // js async function call
 function one() {
@@ -197,8 +211,31 @@ function two() {
 }
 
 one()
-two() 
+two()
 
 //ee+t () => return 'd' 
 
- 
+function ad() {
+    privateAd = a
+    return function () { // ??
+        return 'yo'
+    }
+}
+
+console.log(ad())
+
+// var 
+function vars() {
+    var scopes = 'jey jamie'
+    return console.log(scopes)
+
+}
+
+vars()
+//console.log(scopes)
+
+const nba = 'lebron james'
+console.log(nba)
+// nba='Stephan curry' //typeError
+console.log(a);
+
