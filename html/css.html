@@ -29,19 +29,34 @@
         <borders>
             <p>Eminem </p>
         </borders>
+
+        <input type=text placeholder="Type here" id='tp'>
+        <button onclick='clk()'> Click me</button>
+
     </div>
 
 
 </body>
 
 </html>
-<script> 
-  // let noo= window.setInterval(funss(),10000)
+<script>
+    // let noo= window.setInterval(funss(),10000)
 
     let fc = document.getElementById('pp')
     // fc.style.color="blue"
-    function funss(){
+    function funss() {
         alert('Window property');
+    }
+
+
+    let clk = function () {
+        return function () {
+            setTimeout(() => {
+                alert('go')
+            }, 2000);
+        }();
 
     }
+    let tpy = document.getElementById('tp')
+    console.log(tpy)
 </script>

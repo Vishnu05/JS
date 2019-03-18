@@ -119,7 +119,7 @@ function nested(fn, ln) {
     console.log('Bye...' + getName())
 }
 
-nested('Vishnu', 'Thamizharasan')
+nested('Vishnu', 'Thamizharasan') 
 
 //lexical environment 
 /**
@@ -205,7 +205,7 @@ function one() {
         console.log('first call 1')
     }, 1000)
 }
-
+ 
 function two() {
     console.log('second call 2')
 }
@@ -239,3 +239,4 @@ console.log(nba)
 // nba='Stephan curry' //typeError
 console.log(a);
 
+ 

@@ -51,3 +51,44 @@ function call1() {
 
 console.log(call1())
 
+//nfe - naming function expression
+let nfe = function (who) {
+    return `Hello, Agian ${who}`
+
+}
+
+console.log(nfe('My friend'))
+
+//scheduling settimeout and timeinterval
+
+let st = function () {
+    return 'time out function.. start...'
+}
+//https://gitlab.com/vthamiz5/js/blob/973b3dfb3c7264bcbd9c802b4c084e808dfd3fc9/JS/advfun1.js#L67
+
+// setTimeout(st(), 10000)
+
+/* for (let as = 0; as < 4; as++) {
+    console.log(setTimeout(st(), 10000))
+}
+ */
+function times() {
+    return setTimeout(function () {
+        // alert('no way ..')
+    }, 2000)
+}
+
+times()
+
+let setTim = setInterval(() => {
+    alert('Set Intervals')
+}, 2000);
+
+//clearInterval(setTim, 6000)
+clearTimeout(setTim,5000)
+let it = 1
+setInterval(function () {
+   // func(it)
+}, 100)
+
+console.log(window.document.head)
