@@ -239,4 +239,4 @@ console.log(nba)
 // nba='Stephan curry' //typeError
 console.log(a);
 
- 
+  

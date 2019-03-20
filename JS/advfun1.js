@@ -85,10 +85,43 @@ let setTim = setInterval(() => {
 }, 2000);
 
 //clearInterval(setTim, 6000)
-clearTimeout(setTim,5000)
+clearTimeout(setTim, 5000)
 let it = 1
 setInterval(function () {
-   // func(it)
+    // func(it)
 }, 100)
 
 console.log(window.document.head)
+
+let mps = new Map()
+mps.set(1, 'Name')
+mps.set('god', 'objectss')
+mps.set(true, false)
+console.log(mps)
+
+for (let aaa = 0; aaa < mps.length; aaa++) {
+    console.log(mps[0])
+}
+
+//new Map(['1','psdsa'],[2,'js'],[3,'java'])
+//.forEach(logMapElements)
+
+let fb = {
+    name: 'Vishnu',
+    fun() {
+        return this.name;
+    }
+}
+//console.log(setTimeout(fb.fun(), 1000))
+console.log(fb.fun())
+
+console.log(window.history)
+console.log(Element);
+
+let af = () => {
+    return console.log('arrow function reduce code')
+};
+af();
+
+
+
