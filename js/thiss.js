@@ -71,7 +71,7 @@ console.log(Array.isArray(arr)) // check the array is array or not
 //console.log(arr.split(","))
 
 console.log(window.outerHeight)
-document.write('DOM '+navigator.userAgent+" ||| \n : "+navigator.platform + navigator.javaEnabled())
+document.write('DOM ' + navigator.userAgent + " ||| \n : " + navigator.platform + navigator.javaEnabled())
 
 document.body.style.background = ''
 
@@ -81,3 +81,32 @@ console.log(document.body)
 
 //alert('hello'=='hello')
 
+function instances() {
+    this.name = 'javascript engine'
+    console.log(this)
+}
+
+// ?  constructor
+let inst = new instances()
+
+function consts(params) {
+
+    this.undef = 'objects top level'
+    setTimeout(() => {
+        console.log('parameters and arguments ' + this.undef);
+    }, 0);
+
+    console.log(params)
+}
+
+let nwo = new consts('arguments are first')
+
+//from oops lang this is used to refer the current instance of object ex: java
+
+let invar = 'Computer'
+function th(invar) {
+    invar = invar;
+    return invar
+}
+
+console.log(th('Science'))

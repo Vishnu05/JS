@@ -124,4 +124,24 @@ let af = () => {
 af();
 
 
+let js={
+    standard:'ecmascript',
+    type: 'browser',
+    features: ['html','css','javascript','dom','async call'],
+    get(){
+        this.features.forEach(
+          //  features  => console.log('')
+        )
+    }
+}
 
+let objs={
+    ide:'vs code',
+    liscence:'open source',
+    lang_supt:['js','html','css','python','mostly for forntend'],
+    intelsence:'true',
+    git:'support gitlens is better extension'
+}
+
+//console.log(Array.forEach(objs))
+console.log(objs.lang_supt.forEach)

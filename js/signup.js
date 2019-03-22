@@ -10,7 +10,17 @@ console.log(document.body)
 function native(){
 //  return "Native function"
 }
+console.log(native)
 
-console.log(native())
+var qw=document.querySelector('#fn');
+console.log(qw);
+
+() => {return 'arr'};  
+
+let nmaes=() => {
+    alert('Javascript is better')
+}
+
+//nmaes();
 
 
