@@ -124,24 +124,29 @@ let af = () => {
 af();
 
 
-let js={
-    standard:'ecmascript',
+let js = {
+    standard: 'ecmascript',
     type: 'browser',
-    features: ['html','css','javascript','dom','async call'],
-    get(){
+    features: ['html', 'css', 'javascript', 'dom', 'async call'],
+    get() {
         this.features.forEach(
-          //  features  => console.log('')
+            //  features  => console.log('')
         )
     }
 }
 
-let objs={
-    ide:'vs code',
-    liscence:'open source',
-    lang_supt:['js','html','css','python','mostly for forntend'],
-    intelsence:'true',
-    git:'support gitlens is better extension'
+let objs = {
+    ide: 'vs code',
+    liscence: 'open source',
+    lang_supt: ['js', 'html', 'css', 'python', 'mostly for forntend'],
+    intelsence: 'true',
+    git: 'support gitlens is better extension'
 }
 
 //console.log(Array.forEach(objs))
 console.log(objs.lang_supt.forEach)
+
+let cook = 'set=`cookies` empty spaces'
+let cook1 = 'user=John; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT max-age=30000'
+document.cookie = encodeURIComponent(cook) + ' ' + encodeURIComponent(cook1)
+console.log(document.cookie)

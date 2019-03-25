@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DOM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="">
+
+</head>
+
+<style>
+    .uil {
+        color: cadetblue;
+        font-size: 18px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .adtw {
+        font: 'bold';
+        font-size: 20px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: rgb(37, 228, 123);
+    }
+    .tdl{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color:wheat;
+        font-size: 18px;
+    }
+</style>
+
+<script>
+</script>
+
+<body>
+    <p id='tmid' onclick="tm()" style="color : rgb(224, 24, 84)"> Touch me</p>
+    <div class='uil'>
+        <ul>
+            <li id='na' onclick="lii('na','Vishnu')">Name</li>
+            <li id='or' onclick="lii('or','Capgemini')">organiztion</li>
+            <li id='de' onclick="lii('de','Software Engineer')">Designation</li>
+            <li id='ex' onclick="lii('ex',1)">Experiance</li>
+        </ul>
+    </div>
+
+
+    <div>
+        <p class="adtw"> Adding two Numbers</p>
+        <input id='one' type="text"> +
+        <input id='two' type="text">
+        <p id='sum'></p>
+        <!-- <input id =type="text"> -->
+    </div>
+
+
+    <div>
+        <h3>To do List</h3>
+        <ul class='tdl'>
+            <li>
+                <span>Science</span>
+            </li>
+            <li>
+                <span>Technology</span>
+            </li>
+            <li>
+                <span>Engineering</span>
+            </li>
+            <li>
+                <span>Mathematics</span>
+            </li>
+        </ul>
+    </div>
+    <!-- GetElementById will throw error when we script is loaded first it will not find any dom element,
+        when script are loaded after the dom element null error will not happen
+     -->
+    <script src="/js/DOM/dom.js"></script>
+
+</body>
+
+<p>After body tag</p>
+
+</html>
+
+<p> Hi</p>
