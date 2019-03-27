@@ -57,6 +57,11 @@ console.log(lengths + " sort : " + arr.sort())
 arr = [2, 4, 13, 24, 54, 15, 'vishnu', 'thamizharasan']
 //alert(arr.reverse())
 
+//for each with functions
+arr.forEach(e => {
+    console.log(e)
+});
+
 for (let a of arr) {
     // console.log(a)
 }

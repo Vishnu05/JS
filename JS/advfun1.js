@@ -150,3 +150,17 @@ let cook = 'set=`cookies` empty spaces'
 let cook1 = 'user=John; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT max-age=30000'
 document.cookie = encodeURIComponent(cook) + ' ' + encodeURIComponent(cook1)
 console.log(document.cookie)
+
+// arrow function dosen't have this ???
+function funs() {
+    console.log(this)
+}
+
+// parameterized arrow functions
+let funn = (a, b) => {
+    console.log(this)
+    console.log('Parameter are passing : ' + a + b)
+}
+
+funs()
+funn('Hello! ', 'Are you fine.. ?')

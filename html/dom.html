@@ -23,10 +23,29 @@
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         color: rgb(37, 228, 123);
     }
-    .tdl{
+
+    .tdl {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        color:wheat;
+        color: wheat;
         font-size: 18px;
+    }
+
+    /* Id should start with '#' and class should with ' . dot ' */
+    #oc {
+        color: coral;
+    }
+
+    .v-sel {
+        color: cornflowerblue;
+    }
+
+    #goc {
+        color: rgb(148, 16, 104);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #ochane{
+        color : rgb(15, 189, 160);
     }
 </style>
 
@@ -50,12 +69,17 @@
         <input id='one' type="text"> +
         <input id='two' type="text">
         <p id='sum'></p>
+        <br>
         <!-- <input id =type="text"> -->
     </div>
 
+    <div>
+        <h4>Keyborad events!</h4>
+        <input id='kb' placeholder="Press the key to check which key is pressed">
+    </div>
 
     <div>
-        <h3>To do List</h3>
+        <h3 id='tdl'>To do List</h3>
         <ul class='tdl'>
             <li>
                 <span>Science</span>
@@ -71,10 +95,33 @@
             </li>
         </ul>
     </div>
+
+    <div>
+        <p class='v-sel'>Select the venue : </p>
+        <select name="" id="oc" onchange="sclt()">
+            <option value="Austria">Austria</option>
+            <option value="Australia">Australia</option>
+            <option value="Canada">Canada</option>
+            <option value="France">France</option>
+            <option value="India">India</option>
+            <option value="Germany">Germany</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="United states of America">United states of America</option>
+        </select>
+
+        <div>
+            <p id='goc' class='ocd'></p>
+        </div>
+        <div>
+            <input type="text" placeholder="Type here to check the onchange event" name="" id="onch" onchange="oncha()">
+            <p id='ochane'></p>
+        </div>
+    </div>
+
     <!-- GetElementById will throw error when we script is loaded first it will not find any dom element,
         when script are loaded after the dom element null error will not happen
      -->
-    <script src="/js/DOM/dom.js"></script>
+    <script src="/js/advfun1.js"></script>
 
 </body>
 
