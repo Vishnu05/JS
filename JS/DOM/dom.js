@@ -93,7 +93,7 @@ wind()
 function sclt() {
 
     let och = document.getElementById('oc').value
-      document.getElementById('goc').innerHTML = `Hurrah!! you have Selected : ${och}`
+    document.getElementById('goc').innerHTML = `Hurrah!! you have Selected : ${och}`
     //och_hide.addEventListener('click',() => )
 }
 
@@ -103,9 +103,31 @@ function oncha() {
 
     let OnCh = document.getElementById('onch')
     //    document.getElementById('ochane').innerHTML = `Charecter length : ${OnCh.value.length}`
-    OnCh.addEventListener('mouseleave', () => {
+    OnCh.addEventListener('mouseenter', () => {
         console.log(OnCh.value + " : Charecter length : " + OnCh.value.length)
-        document.getElementById('ochane').innerHTML = `Values are : ${OnCh.value}`
+        document.getElementById('ochane').innerHTML = `Values are : ${OnCh.value.toUpperCase()}`
     }
     )
 }
+
+function onf() {
+    let onv = document.getElementById('on')
+    onv.value = onv.value.toUpperCase()
+}
+
+// removing addEventListner .. ? ?
+
+function paf() {
+    let pav = document.getElementById('popid')
+    console.log(pav)
+
+    pav.addEventListener('mouseover', () => {
+        alert('Yo you touched it!')
+    })
+}
+
+//let rmb = pav.getElementById('rm').removeEventListener('click', () => console.log('remove'))
+/* .removeEventListener('click', () => {
+console.log('Event Listener Removed Successfully')
+}) */
+

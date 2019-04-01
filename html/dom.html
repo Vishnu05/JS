@@ -44,8 +44,26 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    #ochane{
-        color : rgb(15, 189, 160);
+    #ochane {
+        color: rgb(15, 189, 160);
+    }
+
+    /* body{
+        background-image : inherit
+    } */
+
+    #onf {
+        font-size: 20px;
+        /* size:10px; */
+        color: lightblue;
+    }
+
+    #on {
+        color: lightsalmon;
+    }
+
+    #pa {
+        color: rgb(23, 228, 50);
     }
 </style>
 
@@ -53,6 +71,8 @@
 </script>
 
 <body>
+
+    <!-- <img src="/images/nat.jpg">  -->
     <p id='tmid' onclick="tm()" style="color : rgb(224, 24, 84)"> Touch me</p>
     <div class='uil'>
         <ul>
@@ -116,12 +136,23 @@
             <input type="text" placeholder="Type here to check the onchange event" name="" id="onch" onchange="oncha()">
             <p id='ochane'></p>
         </div>
+
+        <div>
+            <!-- Onkeyup when the key is realsed -->
+            <span id='onf'>UpperCase while typing</span>
+            <input placeholder='Charecter changes to uppercase' id='on' onkeyup="onf()">
+        </div>
+
+        <div>
+            <p  onclick="paf()" id='popid'>Popup Aler </p>
+            <button id='rm'>Don't like </button>
+        </div>
     </div>
 
     <!-- GetElementById will throw error when we script is loaded first it will not find any dom element,
         when script are loaded after the dom element null error will not happen
      -->
-    <script src="/js/advfun1.js"></script>
+    <script src="/js/DOM/dom.js"></script>
 
 </body>
 
