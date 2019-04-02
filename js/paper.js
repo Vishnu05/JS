@@ -1,37 +1,8 @@
 
-//'use strict'
+let paper = ' lowercase'
+let Paper = 'Uppercase'
+console.log(paper + " " + Paper)
 
-let paper = function () {
-
-    if (paper === paper) {
-        console.log('')
-    }
-}
-
-let a = paper;
-
-console.log(a);
-
-function con(user) {
-
-    if (user === paper || user === rock) {
-
-    }
-}
-
-let $ = '234'
-console.log($)
-$ = 1;
-console.log($)
-
-num = 123
-
-
-console.log(`rock paper "game"${num}` + "  " + typeof a)
-
-let df;
-console.log(df)
-
-setTimeout(200)
-
-inputs
+let pp = document.getElementById('pr')
+pp.addEventListener('mouseover', () => console.log('Paper are beign touched'))
+console.log(pp)

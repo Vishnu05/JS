@@ -7,31 +7,33 @@
     <title>Rock Paper</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--<link rel="stylesheet" type="text/css" media="screen" href="main.css">-->
-    <script src="/js/paper.js"></script>
-    
+
+
     <style>
         .container {
-              float: left;
-              width : 100px;
-              height: 150 px;
-              margin-right: 500px
-        /*    position: absolute; */
-        };
+            float: left;
+            width: 100px;
+            height: 150 px;
+            margin-right: 500px
+                /*    position: absolute; */
+        }
+
+        ;
 
 
         cont {
-           float : right;
-           width : 100px;
-           margin-left :100px;
-           
+            float: right;
+            width: 100px;
+            margin-left: 100px;
+
         }
     </style>
 
     <script>
-        let asa=document.getElementById('rk')
+        let asa = document.getElementById('rk')
        //let rk=document.addEventListener()
 
-       
+
     </script>
 
 </head>
@@ -39,18 +41,19 @@
 <body>
 
     <div>
-        <div class="container" >
+        <div class="container">
             <img src="/images/rock.jpg" id="rock" ondrag="rk" style="width : 100px; height: 100px;">
             <img src="/images/paper.jpg" id="paper" ondrag="pp" style="width : 100px; height: 100px;">
-            <img src="/images/scissor.png" id="scissor" ondrag="ss" ondragleave="js" style="width: 100px; height: 100px;" >
+            <img src="/images/scissor.png" id="scissor" ondrag="ss" ondragleave="js"
+                style="width: 100px; height: 100px;">
         </div>
 
         <div class="cont">
-            <img src="/images/paper.jpg" id="paper" ondrag="pp">
+            <img src="/images/paper.jpg" id="pr">
 
         </div>
     </div>
-
-</body> 
+    <script src="/js/paper.js"></script>
+</body>
 
 </html>

@@ -36,6 +36,7 @@ console.log(tg)
 let cn = document.getElementsByClassName('uil')
 console.log(cn)
 
+//querySelector which will pick the css element and return it
 let qs = document.querySelectorAll('li')
 console.log(qs)
 
@@ -131,3 +132,7 @@ function paf() {
 console.log('Event Listener Removed Successfully')
 }) */
 
+console.log(Node)
+console.log(Element)
+console.log(EventTarget)
+console.log(document)

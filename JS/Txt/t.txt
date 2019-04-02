@@ -1,0 +1,171 @@
+
+API - Application programming interface (communication messenger)
+Whenever a request send to server, the response will be back 
+
+Web service - A platform or program that can run on any system over the internet 
+xml,json, soap
+
+Loose coupling and Tight coupling
+Reusable 
+Not reusable whole model has to be changed 
+
+SOAP-
+xml based,
+highly secure
+
+REST API
+
+any format is acceptable
+json,xml 
+Http request method
+get - reterive
+put- update
+post- new 
+delete-delete
+patch-partially update
+
+linear y=x element should have the same constant increase in y, the x and y should increase gradually
+expoential y= x power x;
+quadratic =2x + z + 1; the change in y and change in x are should be constant - refernce khan academy video
+
+WSDL - web service descriptive language
+
+RAML
+
+Monolithic ??
+
+Inbound properties - getting response ? incoming request are inbound
+Outbound properties ? - sending output, post method ??
+
+Sandbox - For testing purpose, (production) like VM(Virtual machine)
+
+
+API-LED
+
+Anypoint Platform 
+
+RAML- Restfull API Modeling language
+It look like JSON and YAML 
+
+Mule Application 
+Maven is used in any point studio to build the projects
+anypoint studio works on java 8 
+Munit is mule application for testing (unit testing)
+Mule appications are java applications using spring
+
+Dataweve - converting or make changes in data
+
+logger - o/p
+
+http listener - for deploying purpose, kinda tomcat server ??
+
+Transform message - used to convert the data format types. xml-> json and json to json formating
+
+variable
+
+flow 
+
+subflow
+
+payload ?? - Body of the response
+
+flow refernce 
+
+error handling
+
+bug in model 9 - Transform message
+
+Transport Barrier - the properites that cannot inherit without extending a class 
+
+breakpoint - where the code stop for debugging purpose
+
+Mule 4 post request for adding data american flights, logic needed to added for inserting
+
+--------------------------
+
+Raml
+
+the methods in raml are lowercase
+queryparameter =? google.com/search?q="query params"
+
+baseURI: ex- something /
+when mocking uri generates the base uri will append
+
+resource :
+a file type 
+google.com/file - resource
+
+------------------------------------------
+
+sharding 
+latency
+round robin method
+
+The question of whether a computer can think is no more interesting than the question of whether a submarine can swim.
+
+--------------------------
+skepticism
+
+
+mutable code
+
+dry code : bolierplate
+
+hiccups
+
+unintelligible
+
+spaghetti code
+
+-------------------------
+
+Hardcode - default values are given, dynamically values are not hardcode
+
+Refactoring - Improvement in code, optimization, reducing complexity
+-------------
+coerce
+-------------
+
+Java
+
+Generics - parameter passing in arrayList.. etc, mostly used in colections
+
+LinkedHashMap ? used mostly in mulesoft and collections (Data structure)
+
+Thread join - wait for the thread to complete execution
+
+yeild - 
+
+Synchornized -
+
+24
+
+split and splice in string
+
+Many programming languages support the conversion of a value into another of a different data type. This kind of type conversions can be implicitly or explicitly made. 
+Implicit conversion, which is also called coercion, is automatically done.
+
+-----------
+{google:baseURL}search?q=%s&{google:RLZ}{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchFieldtrialParameter}{google:iOSSearchLanguage}{google:searchClient}{google:sourceId}{google:contextualSearchVersion}ie={inputEncoding}
+----------
+
+\\in-che-infra02
+
+loose coupling - where the class need not  to change the implementation (), making changes dosen't make code complicated
+tight coupling - when we deisgn a system it is harder to change it in future, need to make changes in code (more or likely entire)
+
+Spring d
+
+JPA - java persistance api
+used to connect orm and other tools to make sever side more business logic get things done
+ORM - Object relational mapping, interacts with db
+JDBC - where java can interact with db model 
+pojo - plain old java objects
+
+Centeralized and Decentralized
+
+Centeralized - where there will be only one node, from that node each and every request hah to be passed or received which 
+can make more complex and take more time to received
+
+Decentralized - There will be more nodes, all will be seprated which will not clash with each other and make more elegant 
+reduce complexity 
