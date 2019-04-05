@@ -76,10 +76,14 @@ console.log(...srt + ' ' + [...srt])
 console.log([...srt])
 
 //closure
+/**
+ * When a function has value and values are changed
+ * the variables are changed outside the function and the value will reflect in that function
+ */
 let data = 'json'
 
 function js() {
-    console.log('Hi ' + data)
+    console.log('Hi ' + data)  // jeff dean value is reassigned before the function call
 }
 
 data = 'Jeff dean'

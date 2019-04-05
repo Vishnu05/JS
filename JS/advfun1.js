@@ -12,7 +12,7 @@ console.log(a)
 let b = 10
 console.log(window.b) // undefined
 
-
+// 'this' is global window property in browser
 console.log(this)
 console.log(window)
 

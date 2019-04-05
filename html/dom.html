@@ -65,6 +65,19 @@
     #pa {
         color: rgb(23, 228, 50);
     }
+
+    #blo {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: aquamarine;
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 1;
+    }
+
+    #in {
+        color: blueviolet;
+        font-style: oblique;
+    }
 </style>
 
 <script>
@@ -144,10 +157,24 @@
         </div>
 
         <div>
-            <p  onclick="paf()" id='popid'>Popup Aler </p>
+            <p onclick="paf()" id='popid'>Popup Aler </p>
             <button id='rm'>Don't like </button>
         </div>
+        
+        <br>
+        <span id='ot'>
+            <p>OuterHTML</p>
+        </span>
     </div>
+
+    <!-- Span vs div -->
+
+    <div id='blo'>
+        <p>Block level Element</p>
+    </div>
+    <span id='in'>
+        inline element
+    </span>
 
     <!-- GetElementById will throw error when we script is loaded first it will not find any dom element,
         when script are loaded after the dom element null error will not happen

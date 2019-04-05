@@ -37,6 +37,11 @@ let cn = document.getElementsByClassName('uil')
 console.log(cn)
 
 //querySelector which will pick the css element and return it
+/**
+ * querySelector vs querySelectorAll 
+ * qs = it select only sepicifed element
+ * qsa = will select all the css element in DOM or object
+ */
 let qs = document.querySelectorAll('li')
 console.log(qs)
 
@@ -135,4 +140,39 @@ console.log('Event Listener Removed Successfully')
 console.log(Node)
 console.log(Element)
 console.log(EventTarget)
-console.log(document)
+console.log(document.body)
+
+function elem(...a) {
+    console.log(a)
+}
+
+elem(document.body instanceof Node, document.body instanceof Element, document.body instanceof HTMLElement,
+    document.body instanceof EventTarget)
+
+let d = document.body
+console.log(d.nodeType)
+
+// nodes parent and childNode
+
+console.log(document.childNodes)
+let bod = document.getElementsByTagName('body')
+console.log(bod)
+console.log(Node.childNodes)
+
+/**
+ * Div vs Span 
+ * Div - is large container, it has block level scope and occupy the whole id in document 
+ * Span - Inline element where this can have spefic access till that property  (Need more clarification)
+ */
+let inl = document.getElementById('in')
+inl.addEventListener('mouseover', () => console.log('inline element'))
+
+
+let blocks = document.getElementById('blo')
+blo.addEventListener('mouseover', () => console.log('block level element'))
+
+let ot=document.getElementById('ot').outerHTML='HTMLs'
+
+let op=document.body.firstChild
+console.log(op)
+              
