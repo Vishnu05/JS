@@ -5,26 +5,26 @@ srt = String(srt)
 let a = true + false
 console.log(a)
 
-//alert(+12)
+//console.log(+12)
 
 let ab = 12 + "fsd"
 console.log(2 ** 16 + ab)
 
-//alert('a'<'b')
+console.log('a' < 'b')
 
 
-//let asd = prompt('Name.. ? ')
+let asd = prompt('Name.. ? ')
 
-//alert(asd)
+console.log(asd)
 
-//let ex = prompt('enter you exp' )
-//let exp = (ex < 2) ? 'junior' : (ex < 4) ? 'senior': 'Experinced';
+let ex = prompt('enter you exp')
+let exp = (ex < 2) ? 'junior' : (ex < 4) ? 'senior' : 'Experinced';
 
-//alert(exp)
+console.log(exp)
 
-//let aw=prompt('Input')
+let aw = prompt('Input')
 
-//alert((aw>18)? 'dumb' : 'asol')
+console.log((aw > 18) ? 'dumb' : 'asol')
 
 let abc = 5
 
@@ -44,7 +44,7 @@ name: for (let a = 0; a < 3; a++) {
     }
 }
 
-//console.log(arr)
+console.log(arr)
 
 
 
@@ -62,39 +62,39 @@ function fun(values, val = 'dfs') {
     return values + val;
 }
 
-//alert(fun('yo'))
+console.log(fun('yo'))
 
 //let age = prompt('Enter the age', 0)
 
 function checkAge(age) {
-    return (age < 18) ? confirm('Denied! aren"t you....') : alert('allowed')
+    return (age < 18) ? confirm('Denied! aren"t you....') : console.log('allowed')
 }
 
 //checkAge(prompt('Value'))
 
-function pow(x,y){
-    return console.log(x**y)
+function pow(x, y) {
+    return console.log(x ** y)
 }
 
-pow(3,3)
+pow(3, 3)
 
 
-function callback(check,yes,no){
+function callback(check, yes, no) {
 
-     (check) ? false : yes ? true : nonFanNba;
+    (check) ? false : yes ? true : nonFanNba;
 
 }
 
-function nba(){
+function nba() {
     confirm('Do you like Basketball.. ?')
 }
 
-function fanNba(){
-    alert('NBA ***')
+function fanNba() {
+    console.log('NBA ***')
 }
 
-function nonFanNba(){
-    alert('You are in the worng place kid...')
+function nonFanNba() {
+    console.log('You are in the worng place kid...')
 }
 
-callback(nba(),fanNba(),nonFanNba())
+callback(nba(), fanNba(), nonFanNba())

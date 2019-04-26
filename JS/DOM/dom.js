@@ -176,3 +176,26 @@ let ot=document.getElementById('ot').outerHTML='HTMLs'
 let op=document.body.firstChild
 console.log(op)
               
+console.log(window.outerHeight)
+document.write('DOM ' + navigator.userAgent + " ||| \n : " + navigator.platform + navigator.javaEnabled())
+
+document.body.style.background = ''
+
+console.log(location)
+
+console.log(document.body)
+
+console.log(document.documentElement)
+console.log(document.head)
+console.log(document.body)
+
+/* Nodes check */
+for(let i=0;i<document.body.childNodes.length;i++){
+   // console.log(document.body.childNodes[i])
+}
+
+console.log(document.body.parentNode === document.documentElement)
+
+for (let a of document.body.children) {
+   // console.log(a)
+};

@@ -18,6 +18,17 @@ obj = null
 
 console.log()
 
+
+
+/**Push and Pop */
+let arr = ['hey', 32, { name: 23 }, function () { return 'array function' }]
+
+console.log(arr[3]())
+
+arr.pop()
+
+arr.push('Adding a element');
+
 let arr = [21, 'age', true, { company: 'capgemini', fun() { return 'array inside a object and function' } }, function () {
     return 'function call'
 }];
@@ -30,6 +41,7 @@ arr.pop();
 arr.push(function a() { return 'pushing element to array' })
 console.log(arr)
 
+/** Shift and Unshift */
 arr.unshift('Jon doe'); console.log(arr); //arr.shift()
 //arr.length = 1; //truncating the array element by giving the size of array
 console.log(arr)
@@ -38,6 +50,8 @@ console.log(Math.max(1, 2, 3, 4, 5, 200))
 delete arr[1]
 console.log(arr)
 
+
+/** Split and Splice */
 arr = ['split method in java script .']
 
 arr = ['we', 'are', 'listening', 'capgemini', 'india', 'chennai']
@@ -74,15 +88,6 @@ console.log(arr.join()) //convets the array to string
 console.log(Array.isArray(arr)) // check the array is array or not
 
 //console.log(arr.split(","))
-
-console.log(window.outerHeight)
-document.write('DOM ' + navigator.userAgent + " ||| \n : " + navigator.platform + navigator.javaEnabled())
-
-document.body.style.background = ''
-
-console.log(location)
-
-console.log(document.body)
 
 //alert('hello'=='hello')
 

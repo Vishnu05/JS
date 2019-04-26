@@ -88,7 +88,7 @@ console.log(1e20000)
 a = true;
 console.log(set.length)
 for (let a of set) {
-    console.log(a)
+    //console.log(a)
 }
 
 set.sub
@@ -102,16 +102,19 @@ set.sub
 
 //alert('\\vishnu\\')
 
-
-let arr = ['hey', 32, { name: 23 }, function () { return 'array function' }]
-
-console.log(arr[3]())
-
-arr.pop()
-
-arr.push('Adding a element');
 //alert(arr) 
 
 let str = 'hello javascript i"m going to do a serach'
 
 console.log('indexOf method : ' + str.indexOf('e', 2))
+
+
+let eg = {
+    ironman: "tonystark",
+    captian: "steven",
+    avengers: function () {
+        return this.ironman + " " + this.captian
+    }
+}
+
+console.log(eg.avengers())

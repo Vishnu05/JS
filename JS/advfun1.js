@@ -93,6 +93,8 @@ setInterval(function () {
 
 console.log(window.document.head)
 
+
+/** Map is similar to object but the key value can be anytype */
 let mps = new Map()
 mps.set(1, 'Name')
 mps.set('god', 'objectss')

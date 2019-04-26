@@ -169,3 +169,11 @@ can make more complex and take more time to received
 
 Decentralized - There will be more nodes, all will be seprated which will not clash with each other and make more elegant 
 reduce complexity 
+
+
+througput - how much time it taken for given period of time eg: 50 units can be produced in 5 hours then throughput will be 
+10 units per hour 
+
+Cache - Images and other large capacity will be stored in local storeage when the request asked by user it loads smoothly 
+eg. CDN it will have MIME types of things in local storage when the request is asked the user will get instantly without 
+need of waiting to load the MIME.

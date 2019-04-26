@@ -7,33 +7,14 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="/CSS/signup.css">
-
-    <script src="/js/signup.js"></script>
-
-    <script>
-
-        let fnn = document.getElementById('fn');
-
-        document.write(fnn)
-
-        function fun() {
-            if (fnn === null) {
-                document.getElementById('fun')
-            }
-        }
-    </script>
 </head>
 
 <body>
-
-
-    <script>
-        console.log(document.body.parentNode === document.documentElement)
-   // console.log(document.body)</script>
+    
     <div class="container">
 
-        <form id="n">
-            <div form="fn-cl">
+        <form onload=" return validate()">
+            <div>
                 <input type="text" id='fn' placeholder="First name" style="color:chartreuse;">
             </div>
 
@@ -60,48 +41,16 @@
                 <p style="color:chocolate;"> CSS Style sheet</p>
             </div>
 
-            <p onclick='cqf()' id='cqw' style="font-size: 20px;"> Query Selector </p>
         </form>
     </div>
 
-    <div>
-        <p id="el"> Hey Hello!</p>
-    </div>
+    <p onclick='cqf()' id='cqw' style="font-size: 20px;"> Query Selector </p>
 
-    <script>
-        for (let a of document.body.children) {
-            console.log(a)
-            //alert(a)
-        };
-
-        var qws = document.querySelector('#cqw');
-        console.log(qws);
-
-        let cqf = function () {
-            return document.getElementById('cqw').innerHTML = 'Query chAnginG'
-        }
-    </script>
+    <span onclick="el()" id='ell'>
+          Don't Touch!
+    </span>
+ 
+    <script src="/js/objects.js"></script>
 </body>
 
 </html>
-<!-- <script>
-    console.log(document.body)
-</script> -->
-
-<script>
-    // alert(el)
-    console.log()
-    let els = document.getElementById('el');
-    els.style.color = 'blue';
-
-    let tags = document.getElementsByTagName('div') // collection of tag
-
-    for (let i of tags) {
-        //  console.log(i)
-    }
-    let query = document
-    console.log(query)
-
-    document.body.style.background = "#42ebf4"
-
-</script>
