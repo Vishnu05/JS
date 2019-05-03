@@ -10,16 +10,16 @@
 </head>
 
 <body>
-    
+
     <div class="container">
 
-        <form onload=" return validate()">
+        <form onsubmit="validate()">
             <div>
                 <input type="text" id='fn' placeholder="First name" style="color:chartreuse;">
             </div>
 
             <div>
-                <input type="text" id='ln' placeholder="Last name">
+                <input type="text" id='lns' placeholder="Last name">
             </div>
             <div>
                 <input type="text" id='un' placeholder="Username">
@@ -33,9 +33,11 @@
             <div>
                 <input type="email" id='em' placeholder="email">
             </div>
-            <div>
-                <input type="submit" onclick="fun()" value="Submit">
-            </div>
+            <!-- <div>
+                <input type="submit"  value="Submit">
+            </div> -->
+
+            <button type="button">Sub</button>
 
             <div class="pp">
                 <p style="color:chocolate;"> CSS Style sheet</p>
@@ -47,10 +49,10 @@
     <p onclick='cqf()' id='cqw' style="font-size: 20px;"> Query Selector </p>
 
     <span onclick="el()" id='ell'>
-          Don't Touch!
+        Don't Touch!
     </span>
- 
-    <script src="/js/objects.js"></script>
+
+    <script src="/js/signup.js"></script>
 </body>
 
 </html>

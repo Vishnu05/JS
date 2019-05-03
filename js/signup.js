@@ -10,7 +10,7 @@ let cqf = function () {
 let els = document.getElementById('ell');
 els.style.color = '';
 
-function el(){
+function el() {
     document.write('Hello ')
 }
 
@@ -27,7 +27,7 @@ document.body.style.background = "1#42ebf4"
 
 let fnn = document.getElementById('fn');
 
-document.write(fnn)
+//document.write(fnn)
 
 function fun() {
     if (fnn === null) {
@@ -51,13 +51,12 @@ let nmaes = () => {
     alert('Javascript is better')
 }
 
-console.clear()
+// console.clear()
 
-let fn = document.getElementById('fn')
 
 function validate() {
-
-    if (fn == '') {
+    let ln = document.getElementById('lns')
+    if (ln === '') {
         alert('Fill the name ')
     }
 }

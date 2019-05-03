@@ -199,3 +199,10 @@ console.log(document.body.parentNode === document.documentElement)
 for (let a of document.body.children) {
    // console.log(a)
 };
+
+
+/** Changing inner html doesn't work */
+let iht = document.getElementById('ihe').innerHTML = document.getElementById('iht').innerHTML  // ? why innerHTML
+console.log(iht)
+
+document.getElementById('att').style.color='red'

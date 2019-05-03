@@ -5,10 +5,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>DOM</title>
+    <link rel="shorcut icon" type="" href="https://pluralsight.imgix.net/paths/path-icons/javascript-36f5949a45.png"
+        sizes="20">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="/CSS/dom.css">
 </head>
- 
+
 <body>
 
     <!-- <img src="/images/nat.jpg">  -->
@@ -86,7 +88,7 @@
             <p onclick="paf()" id='popid'>Popup Aler </p>
             <button id='rm'>Don't like </button>
         </div>
-        
+
         <br>
         <span id='ot'>
             <p>OuterHTML</p>
@@ -101,9 +103,26 @@
     <span id='in'>
         inline element <br><br>
     </span>
+    <!-- Toolpic -->
+    <span id=att title="Bad partice">Attributes doesn't require quotes from html 5! @bad parctise</span>
+    <p style='display:none' id='iht' style='font:bold'>Inner HTML Element</p>
+    <p id='ihe'></p>
 
+    <!-- Accept type of files from input -->
+    <div class='acpt'>
+        <form action="">
+            <input type="file" accept="image/*" name="" id="">
+            <button type="submit">Submit</button>
+        </form> <br><br>
+    </div>
+
+    <!-- Autocomplete used to load existing record to load or not  -->
+    <div>
+        <input type="email" placeholder="Email ID" autocomplete="on" name="" id="">
+        <input type="submit" value="Submit">
+    </div>
     <!-- GetElementById will throw error when we script is loaded first it will not find any dom element,
-        when script are loaded after the dom element null error will not happen
+        when script are loaded after the dom null error will happen dom loaded first and js is intialized
      -->
     <script src="/js/DOM/dom.js"></script>
 

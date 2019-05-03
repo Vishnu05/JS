@@ -36,7 +36,7 @@ function add(x, y) {
 
 console.log(add(1, 2, 3, 4, 5))
 
-//Rest parameters...
+/** Rest parameters...*/
 function addAll(...ab) {
     let sum = 0;
 
@@ -48,7 +48,8 @@ function addAll(...ab) {
 console.log(addAll(1, 2, 3, 4, 5, 6, 7, 8))
 console.log(1)
 
-function money(a1, a2, ...a3) { //rest parameter must be in end or (error occurs)
+/** Rest parameter must be in end or (error occurs)*/
+function money(a1, a2, ...a3) { 
     console.log(a1 + a2)
     console.log(a3[0])
     console.log(a3[1])
@@ -123,7 +124,7 @@ function nested(fn, ln) {
     console.log('Bye...' + getName())
 }
 
-nested('Vishnu', 'Thamizharasan') 
+nested('Vishnu', 'Thamizharasan')
 
 //lexical environment 
 /**
@@ -204,18 +205,37 @@ let funName = function () {
 console.log(funName())
 
 // js async function call
+/** SetTime out
+ * Function will wait for certian period of time
+ */
 function one() {
     setTimeout(function () {
-        console.log('first call 1')
-    }, 1000)
+        console.log('first call 1 : set timeout example')
+    }, 2000)
 }
- 
+
 function two() {
-    console.log('second call 2')
+    console.log('second call 2 : js dosen"t wait for the other function to complete Asynchronous Call')
 }
 
 one()
 two()
+
+/** SetTimeInterval 
+ * Loop, it execute again when the time completes bascially endless loop
+ * but it can stoped using clearInterval
+*/
+// tm()
+
+function tm() {
+
+    console.log('Time interval.......')
+    return setInterval(() => {
+        console.log('Time Interval : kinda paradox')
+    }, 0000000);
+}
+
+clearInterval(tm,4000)
 
 //ee+t () => return 'd' 
 
@@ -242,5 +262,3 @@ const nba = 'lebron james'
 console.log(nba)
 // nba='Stephan curry' //typeError
 console.log(a);
-
-  

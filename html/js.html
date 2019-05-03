@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="af">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>JavaScript Eg</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href=" ">
     <!-- <script src="/js/ob.js"></script> -->
-    <script src="/js/thiss.js">
+
     </script>
     <script>
         let aaa = document.getElementById('cw')
@@ -17,7 +17,7 @@
             as = window.open('https://www.google.com')
         }
 
-        function op() {
+        function ops() {
             as.close();
         }
     </script>
@@ -27,14 +27,18 @@
 <body>
     <div>
         <input type="button" value="Close : - " onclick="cw()">
-        <input type="button" value="Open : - " onclick="op()">
+        <input type="button" value="Open : - " onclick="ops()">
         <a href="http://google.com">Google</a>
 
     </div>
 
     <div>
+        <br></br>
         <p id='chd'>Hey Dom,take care of the color</p>
     </div>
+
+  
+    <script src="/js/dom/dom.js"> </script>
 </body>
 
 </html>
@@ -42,6 +46,6 @@
     // style dosen't work when script is inside the document ??????
     let ab = document.getElementById('chd');
     ab.style.color = 'blue';
-    document.body.style.background='#19d2b1'
-    
+    document.body.style.background = '#19d2b1'
+
 </script>

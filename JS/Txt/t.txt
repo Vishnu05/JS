@@ -177,3 +177,6 @@ througput - how much time it taken for given period of time eg: 50 units can be 
 Cache - Images and other large capacity will be stored in local storeage when the request asked by user it loads smoothly 
 eg. CDN it will have MIME types of things in local storage when the request is asked the user will get instantly without 
 need of waiting to load the MIME.
+
+DNS - http://10.138.8.188/ 10.138.8.218
+                                       10.109.32.189                              
