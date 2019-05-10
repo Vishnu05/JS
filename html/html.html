@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Html responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon"
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png"
+        type="image/x-icon">
+    <link rel="stylesheet" href="/CSS/html.css">
+    <title>HTML</title>
+</head>
+
+<body>
+
+    <header id="hed">
+
+        <a href="">NavBar</a> &nbsp;&nbsp;&nbsp;
+        <a href="">Home</a> &nbsp;&nbsp;&nbsp;
+        <a href="">Profile</a> &nbsp;&nbsp;&nbsp;
+        <a href="">HTML 5</a> &nbsp;&nbsp;&nbsp;
+        <a href="">JavaScript</a> &nbsp;&nbsp;&nbsp;
+        `
+    </header>
+
+    <div>
+        <!-- Audio  -->
+        <audio controls>
+            <source src="/images/horse.ogg" type="audio/ogg">
+        </audio>
+    </div>
+
+    <div>
+        <pre>
+        <code>
+            hello world
+            console.log('JS')
+            document.write('script')
+        </code></pre>
+    </div>
+
+    <div>
+        <form onsubmit="val()" ; return onload="dis()">
+            Input: <br>
+            <input type="text" name="" id="input"> <br>
+            email: <br>
+            <input type="email" name="" id="email"> <br><br>
+            <input type="submit" id="sub" value="Submit">
+            <select value="select">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="js">JS</option>
+            </select>
+            <input type="reset" value="Reset">
+        </form>
+
+        <script>
+
+            let input = document.getElementById('input')
+            let email = document.getElementById('email')
+            let submit = document.getElementById('sub')
+            submit.disabled = true
+
+            if (input === '') {
+                sumbit.disabled = false
+            }
+
+            function val() {
+                if (input.value == '' || email.value == '') {
+                    alert(`Null values can't be Accepted`)
+                    //submit.disabled = true
+                }
+
+                if (input.value != '' || email.value != '') {
+                    submit.disabled = false
+                }
+            }
+
+            function dis() {
+                if (input.value != '' || email.value != '') {
+                    // alert(`Null values can't be Accepted`)
+                    submit.disabled = true
+                }
+            }
+
+        </script>
+    </div>
+    <br>
+    <div>
+
+        <button type="" class="sub"><a href="https://google.com" target="_blank">Button</a></button>
+        <div>
+            <span id="op">Don't</span>
+        </div>
+    </div>
+    <script>
+        let op = document.getElementById('op')
+        op.addEventListener('mouseover', fun)
+        /** Fun... */
+        function fun() {
+            window.open('https://www.w3schools.com'),
+                window.open('https://www.w3schools.com'),
+                window.open('https://www.w3schools.com'),
+                window.open('https://www.w3schools.com'),
+                window.open('https://www.w3schools.com'),
+                window.open('https://www.w3schools.com'),
+                window.open('https://www.w3schools.com')
+        }
+    </script>
+
+    <!-- Carousal automatic "w3schools.com/howto/howto_js_slideshow.asp" -->
+    <div class="container">
+        <img id='pap' src="/images/paper.jpg" alt="paper" style="width: 45px; height: 45px; visibility :hidden;">
+        <img id='roc' src="/images/rock.jpg" alt="Rock" style="width: 45px; height: 45px; visibility :hidden;">
+        <img id='scis' src="/images/scissor.png" alt="Scissor" style="width: 45px; height: 45px; visibility :hidden;">
+        <p id='dis'></p>
+        <button onclick="pa()">OK</button>
+    </div>
+
+    <script>
+        let pap = document.getElementById('pap')
+        let roc = document.getElementById('roc')
+        let scis = document.getElementById('scis')
+        let papq = document.querySelectorAll('img')
+        // let dis = document.getElementById('dis')
+
+       // pa()
+        console.log(papq.length)
+        function pa() {
+
+            return setTimeout(() => {
+
+                for (let a = 0; a < papq.length; a++) {
+                    document.getElementById('dis').innerHTML = papq[a].value
+                }
+
+            }, 1000);
+        }
+    
+        // recur() 
+        function recur() {
+            console.log('Recursive function')
+            /** Recursive function  */
+            setTimeout(recur, 0)
+        }
+    </script>
+
+</body>
+
+</html>
