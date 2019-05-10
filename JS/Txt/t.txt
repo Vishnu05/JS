@@ -32,7 +32,10 @@ WSDL - web service descriptive language
 
 RAML
 
-Monolithic ??
+Monolithic ?? - Centeralized server all the load and deployment will be in single server which is scaled by vertical scaling by adding
+more ram or resoruce. 
+Advantages  - The request will be directly hit in one server which is good
+Disadvantages - for each time a minor change or deployment is done whole server is reloaded again, one point of failure can be disaster
 
 Inbound properties - getting response ? incoming request are inbound
 Outbound properties ? - sending output, post method ??
@@ -97,8 +100,8 @@ google.com/file - resource
 
 ------------------------------------------
 
-sharding 
-latency
+sharding  - databases ? technique
+latency 
 round robin method
 
 The question of whether a computer can think is no more interesting than the question of whether a submarine can swim.
@@ -179,4 +182,27 @@ eg. CDN it will have MIME types of things in local storage when the request is a
 need of waiting to load the MIME.
 
 DNS - http://10.138.8.188/ 10.138.8.218
-                                       10.109.32.189                              
+                                       10.109.32.189 
+
+Unicode  - like ASCII(values) it contains more charecter, the browser able to understand multiple language and charecter with help of
+unicode char set ex - utf-8  refernce : https://www.w3schools.com/html/html_charset.asp
+
+URL - uniform resource locator -: scheme://prefix.domain:port/path/filename
+scheme - defines the type of Internet service (most common is http or https, ftp and wss are used ocassionaly)
+prefix - defines a domain prefix (default for http is www)
+domain - defines the Internet domain name (like w3schools.com)
+port - defines the port number at the host (default for http is 80)
+path - defines a path at the server (If omitted: the root directory of the site)
+filename - defines the name of a document or resource
+
+Attribute  - attribute and attribute value (height = 10px)
+target attribute - how the submit or link should be opened in a browser (in same page new window or tab) 
+
+tidy - order or in clean manner
+
+gitlens - git blame features are working after the installation of extension (files are scanned ) otherwsie gitblame dosen't work in old git files
+
+cripple - disabled, unable to walk (for machine - serverly damaged)
+
+code resablity - it says everything (mydefintion - code that can be refactored) 
+

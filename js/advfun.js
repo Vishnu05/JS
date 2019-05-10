@@ -1,5 +1,7 @@
 
-
+/**
+ * Power Function using libary and loop
+ */
 let rec = [Math.pow(2, 3)]
 console.log(rec)
 // let m = prompt('Number to be powered')
@@ -49,7 +51,7 @@ console.log(addAll(1, 2, 3, 4, 5, 6, 7, 8))
 console.log(1)
 
 /** Rest parameter must be in end or (error occurs)*/
-function money(a1, a2, ...a3) { 
+function money(a1, a2, ...a3) {
     console.log(a1 + a2)
     console.log(a3[0])
     console.log(a3[1])
@@ -235,7 +237,7 @@ function tm() {
     }, 0000000);
 }
 
-clearInterval(tm,4000)
+clearInterval(tm, 4000)
 
 //ee+t () => return 'd' 
 
@@ -262,3 +264,11 @@ const nba = 'lebron james'
 console.log(nba)
 // nba='Stephan curry' //typeError
 console.log(a);
+
+/** Function bind */
+
+bind()
+
+function bind() {
+    
+}

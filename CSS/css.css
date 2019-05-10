@@ -1,0 +1,24 @@
+
+.pp{
+    color:chocolate;
+    width:250px;
+    height: 250px;
+    border: 1px solid black;
+    font-display: initial;
+    font-size: 40px;
+    font-weight: 300;
+   
+    /* border-style: double; */
+    border-width: 5px;
+    align-content: center;
+    align-items: center;
+}
+body{
+    /* background-color:gray; */
+}
+
+bossrders{
+    width :200px;
+    height :200px;
+    border: 1px lightblue;
+}
