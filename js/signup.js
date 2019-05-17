@@ -53,11 +53,25 @@ let nmaes = () => {
 
 // console.clear()
 
+let sb = document.getElementById('sb')
+let ln = document.getElementById('lns')
+console.log(sb)
+
+/** when js is finshed loaded it is true after entering the name it never checks again so it is disabled forever 
+ * to enable the js has to call it again like function call to check the values and condition (not true about this statement)
+ */
+if (ln.value == '') {
+    sb.disabled = true
+}
 
 function validate() {
-    let ln = document.getElementById('lns')
-    if (ln === '') {
-        alert('Fill the name ')
+    if (ln.value == '') {
+        //alert('Fill the name ')
+        sb.disabled = true
+    }
+
+    if (ln.value != '') {
+        sb.disabled = false;
     }
 }
 
@@ -67,7 +81,7 @@ let fo = document.querySelectorAll('input');
 for (let i = 0; i < fo.length; i++) {
     fo[i].addEventListener('click', () => console.log(fo[i])); // ? ? ?
 }
-
-
-
+console.count()
+console.error('Error message to console //\\..........')
+//console.exception('nope')
 

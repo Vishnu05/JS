@@ -20,7 +20,10 @@ console.log()
 
 
 
-/**Push and Pop */
+/**Push and Pop 
+ * push - it will add a element in last array
+ * pop - removes the last element in array 
+*/
 let arr = ['hey', 32, { name: 23 }, function () { return 'array function' }]
 
 console.log(arr[3]())
@@ -41,7 +44,12 @@ arr.pop();
 arr.push(function a() { return 'pushing element to array' })
 console.log(arr)
 
-/** Shift and Unshift */
+/** Shift and Unshift 
+ * sfit - (pop) similar but it will removes the element from first
+ * unshift - (push) add element in first
+ * these two are more costly when compared to pop & push 
+ * each and every element has to be shifted accordinly 
+*/-
 arr.unshift('Jon doe'); console.log(arr); //arr.shift()
 //arr.length = 1; //truncating the array element by giving the size of array
 console.log(arr)

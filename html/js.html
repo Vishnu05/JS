@@ -7,6 +7,9 @@
     <title>JavaScript Eg</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href=" ">
+    <link rel="shortcut icon"
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
+        type="image/x-icon">
     <!-- <script src="/js/ob.js"></script> -->
 
     </script>
@@ -37,8 +40,8 @@
         <p id='chd'>Hey Dom,take care of the color</p>
     </div>
 
-  
-    <script src="/js/dom/dom.js"> </script>
+
+    <script src="/js/Properties_and_descriptors.js"> </script>
 </body>
 
 </html>
@@ -46,6 +49,20 @@
     // style dosen't work when script is inside the document ??????
     let ab = document.getElementById('chd');
     ab.style.color = 'blue';
-    document.body.style.background = '#19d2b1'
+    document.body.style.background = '#19d2b1~'
+
+    let colors = document.getElementById('chd').addEventListener('click', col)
+    let arr_color = ['green', 'blue', 'red']
+
+    function col() {
+
+        for (let i = 0; i < arr_color.length; i++) {
+            setTimeout(() =>
+                ab.style.color = arr_color[i], 1000)
+        }
+
+    }
+
+
 
 </script>

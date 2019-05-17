@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://signup.com/mobileweb/2.0/images/build/mobile-organizers.png">
     <link rel="stylesheet" type="text/css" media="screen" href="/CSS/signup.css">
 </head>
 
@@ -19,7 +20,7 @@
             </div>
 
             <div>
-                <input type="text" id='lns' placeholder="Last name">
+                <input type="text" id='lns' placeholder="Last name" onkeyup="validate()">
             </div>
             <div>
                 <input type="text" id='un' placeholder="Username">
@@ -33,11 +34,9 @@
             <div>
                 <input type="email" id='em' placeholder="email">
             </div>
-            <!-- <div>
-                <input type="submit"  value="Submit">
-            </div> -->
+            <!-- <button type="submit">Sub</button> -->
 
-            <button type="button">Sub</button>
+            <input type="submit" id='sb' value="sumbit">
 
             <div class="pp">
                 <p style="color:chocolate;"> CSS Style sheet</p>

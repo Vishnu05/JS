@@ -206,3 +206,11 @@ cripple - disabled, unable to walk (for machine - serverly damaged)
 
 code resablity - it says everything (mydefintion - code that can be refactored) 
 
+polling frequency - in computing the data will be checking the db for specific period of time, when a new email comes it pull the notifications
+check and if new it will show in notification bar.
+constanly will be checking is there a new data 
+
+Array - By default the array size will be the integer size in java so it will not go beyond that  2^31-1
+Object in java - ? java.lang
+foreach internal working (it differs from normal for loop)
+String - comparing string (equals method) or else it refer from the refernce and check giving wrong o/p for string (dk) about char

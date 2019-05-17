@@ -53,7 +53,9 @@ set.add('philip', 'james', 'u')
 set.add('lebron', 'james')
 set.add('stephan', 'curry')
 
-console.log(set)
+console.log(set.size)
+let setArray = Array.from(set)
+console.log(setArray[2])
 
 let aa = 'vishnu'
 let bb = aa
@@ -115,14 +117,14 @@ for (let a of Object.entries(val)) {
 
 let abc = ['windows', '10', 'professional']
 
-let [os,version]=abc
+let [os, version] = abc
 
 console.log()
 
-let [,adf,]=abc
+let [, adf,] = abc
 console.log(adf)
 
-let json=JSON.stringify(val);
+let json = JSON.stringify(val);
 //let js=JSON.parse(val);
 console.log(json)
 

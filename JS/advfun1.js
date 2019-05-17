@@ -59,7 +59,9 @@ let nfe = function (who) {
 
 console.log(nfe('My friend'))
 
-//scheduling settimeout and timeinterval
+/** scheduling settimeout and timeinterval it is not part of the js it is part of NodeJS
+ * these function dosen't need to call they will execute with flow 
+*/
 
 let st = function () {
     return 'time out function.. start...'
@@ -86,12 +88,44 @@ let setTim = setInterval(() => {
 
 //clearInterval(setTim, 6000)
 clearTimeout(setTim, 5000)
+console.log(setTim)
+
+let ctin = setInterval(() => console.log('before clearing time interval'), 1000)
+
+/** if the normal function is used, it will directly fire the function 
+ * and we cannot observe a big difference, by settimeout the difference can be observed
+ */
+setTimeout(() => {
+    clearInterval(ctin)
+    console.log(" after clearing time interval...  ")
+}, 10000)
+
 let it = 1
 setInterval(function () {
     // func(it)
 }, 100)
 
-console.log(window.document.head)
+/** Settimeout function arguments */
+
+function doafter2(name) {
+    console.log(name)
+    //doafter2()
+}
+
+setTimeout(doafter2, 3000, 'Settimeout arguments after function call')
+
+setTimeout(() =>
+    console.log('set timeout no function call')
+    , 1000)
+
+setInterval(() => {
+    console.log('no function call')
+}, 1000000);
+
+/** Splitting the cpu usage */
+
+let count = Date.name
+console.log("Date now function " + count)
 
 
 /** Map is similar to object but the key value can be anytype */
@@ -166,3 +200,59 @@ let funn = (a, b) => {
 
 funs()
 funn('Hello! ', 'Are you fine.. ?')
+
+/** Function binding  */
+
+function f(x) {
+    // prompt(this)
+    console.log(this)
+}
+
+let user = {
+    g: f.bind('Binding.. ?')
+}
+
+user.g()
+
+
+function os() {
+
+    var privateVar
+
+    var cpu = function () {
+        privateVar = 'Central processing unit'
+    }
+
+    this.monitor = function () {
+        return cpu()
+    }
+}
+
+console.log(os())
+
+/** New function 
+ * while passing the arguments it can execute the process , New function change the String into  a function 
+*/
+
+let funnew = new Function(`console.log('New Function : ' + (3 + 4))`)
+let funnew1 = new Function(console.log(1 + 3))
+
+funnew(); funnew1();
+
+/** normal functions can only pass arguments, it cannot pass String */
+let funold = function () { };
+
+function clos() {
+    let value = 'closure examples with new function'
+
+    /** throws error */
+    let vv = new Function('alert(value)')
+
+    return vv()
+}
+clos()
+
+let sum = new Function('aa', 'b', 'return aa + b')
+let aa = 10; b = 15;
+
+console.log(sum(aa, b))

@@ -23,6 +23,8 @@ function lii(name, value) {
 
 }
 
+console.log(window.document.head)
+
 function name(x) {
 
     return x

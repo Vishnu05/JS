@@ -34,6 +34,7 @@
 
     <div>
         <pre>
+            <!-- code tag ? -->
         <code>
             hello world
             console.log('JS')
@@ -44,9 +45,9 @@
     <div>
         <form onsubmit="val()" ; return onload="dis()">
             Input: <br>
-            <input type="text" name="" id="input"> <br>
+            <input type="text" name="" id="input" onkeyup="val()"> <br>
             email: <br>
-            <input type="email" name="" id="email"> <br><br>
+            <input type="email" name="" id="email" onkeyup="val()"> <br><br>
             <input type="submit" id="sub" value="Submit">
             <select value="select">
                 <option value="html">HTML</option>
@@ -63,17 +64,13 @@
             let submit = document.getElementById('sub')
             submit.disabled = true
 
-            if (input === '') {
-                sumbit.disabled = false
-            }
-
             function val() {
-                if (input.value == '' || email.value == '') {
-                    alert(`Null values can't be Accepted`)
-                    //submit.disabled = true
+                if (input.value.trim() == '' || email.value.trim() == '') {
+                  //  alert(`Null values can't be Accepted`)
+                    submit.disabled = true
                 }
 
-                if (input.value != '' || email.value != '') {
+                if (input.value != '' && email.value != '') {
                     submit.disabled = false
                 }
             }
