@@ -58,4 +58,39 @@ let cg={
 
 console.log(cg)
 
+/** Of it iterates the value in array, it cannot deal with objects??
+ * while (in) iterates the key not the value and it can be accessed by like array format ????
+ */
+let got = {
+    stark: 'winterfell',
+    lannister: 'Kingslanding',
+    targareyan: 'Most of them are dead',
+    puprose: 'iron throne',
+    iron_throne: 'Dragon destoryed the Iron throne'
+}
+
+let movies = ['interstellar', 'Dark knight triology', 'inception', 'prestige']
+
+/** for..in */
+for (let i in movies) {
+    console.log(i + " : " + movies[i])
+}
+
+for (let i in got) {
+    console.log(i + " : " + got[i])
+}
+
+/** for..of */
+try {
+    for (let i of got) {
+        console.log(i)
+    }
+} catch (e) {
+    console.error(e.message)
+}
+
+for (let i of movies) {
+    console.table(i)
+}
+
 

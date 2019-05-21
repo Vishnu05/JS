@@ -27,7 +27,7 @@
 
 </head>
 
-<body>
+<body id='bgcl'>
     <div>
         <input type="button" value="Close : - " onclick="cw()">
         <input type="button" value="Open : - " onclick="ops()">
@@ -40,8 +40,10 @@
         <p id='chd'>Hey Dom,take care of the color</p>
     </div>
 
+    <button onclick='changeBgCl()'>Change Color</button>
+    <button type="reset" onmouseover="reset()">Reset Color</button>
 
-    <script src="/js/Properties_and_descriptors.js"> </script>
+    <script src="/js/Class.js"> </script>
 </body>
 
 </html>
@@ -60,9 +62,25 @@
             setTimeout(() =>
                 ab.style.color = arr_color[i], 1000)
         }
+    }
+
+    let bgcl = document.getElementById('bgcl')
+
+    function changeBgCl() {
+
+        /** This work in debugging mode maybe I don't know where to define settimeout function
+         *  problem is delay or something
+        */
+        for (let i of arr_color) {
+            setTimeout(() => {
+                bgcl.style.background = i
+            }, 1000);
+
+        }
 
     }
 
-
-
+    function reset() {
+        let rese = document.getElementById('bgcl').style.background = 'white'
+    }
 </script>
