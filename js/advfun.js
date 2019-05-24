@@ -143,6 +143,16 @@ console.log(gh)
 function hoist(a) {
     return a;
 }
+
+/** Function hoisting */
+funns = function () {
+    console.log(`Hoisting this dosen't happen in class th`)
+}
+
+/**  let funns = funns() this throws error */
+var funns = funns()
+
+
 console.log('functoin call : ' + hoist(gh))
 var gh; //if we change to let the variable becames undefined 
 

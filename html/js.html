@@ -71,12 +71,22 @@
         /** This work in debugging mode maybe I don't know where to define settimeout function
          *  problem is delay or something
         */
-        for (let i of arr_color) {
-            setTimeout(() => {
-                bgcl.style.background = i
-            }, 1000);
+        
+       
 
+        let j = 0;
+        function funs() {
+            bgcl.style.background = arr_color[j]
+            j++;
+            // return changeBgCl()
         }
+        
+        // for (let i of arr_color) {
+        //     setTimeout(() => {
+        //         bgcl.style.background = i
+        //     }, 1000);
+        // }
+        return setTimeout(funs, 1000)
 
     }
 
