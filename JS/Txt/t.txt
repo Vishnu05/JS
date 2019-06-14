@@ -214,3 +214,15 @@ Array - By default the array size will be the integer size in java so it will no
 Object in java - ? java.lang
 foreach internal working (it differs from normal for loop)
 String - comparing string (equals method) or else it refer from the refernce and check giving wrong o/p for string (dk) about char
+
+Maven - it is build tool for java and other purpose 
+Mainly used for dependency management for project 
+It has remote and local repositary, where remote repositary will have the all dependency to download, first it checks with the local repositary
+if there is no dependency in local repositary then it will automatically will download from the remote repositary
+Maven has many parts to do create, build, run, deploy 
+Pom - Project object Model, where all the configuration are made in this 
+Three important factor while creating dependency are
+Artifact id - This is project id for creating a maven project  
+group id - This is like super class which a unique id will be created in this and it will be used across all the project 
+version id - version id is similar what version we need to use or download
+Maven is not just a dependency downloading thing it is more for build, develop, test, production
