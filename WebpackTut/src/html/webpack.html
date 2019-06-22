@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Webpack Tutorial</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="https://cdn.auth0.com/blog/webpack/logo.png">
+    <link rel='stylesheet' type='text/css' media='screen' href='/Webpacktut/src/css/webpack.css'>
+
+</head>
+
+<body>
+
+    <div class="cm">
+        <button onclick="web()">Click Me</button>
+        <p id="wp">This is Webpack example</p>
+    </div>
+
+    <form>
+        <div>
+            <input type="email" name="" placeholder="Email" onkeyup="validate()" id='em'>
+        </div> <br>
+        <div>
+            <input type="password" name="" placeholder="Password" onkeyup="validate()" id="pwd">
+        </div> <br>
+        <button id="sub" type="submit">OK</button>
+    </form>
+
+    <br>
+    <span>This is adding two numbers </span> <br>
+    <br>
+    <div>
+        <input type="number" name="" id="one" onkeyup="ad()">
+        &nbsp;+&nbsp;
+        <input type="number" name="" id="two" onkeyup="ad()">
+        &nbsp;&nbsp;
+
+        <button onclick="ad()" type="submit">Click Here </button>
+        <div>
+           <br>  <span style="color:chocolate">THE RESULTS ARE :</span> <span id="result"> </span>
+        </div>
+
+    </div>
+
+    <p id='pp'> Hey MouseOver</p>
+
+    <!-- <script src="/webpacktut/src/js/globalVariable.js"></script>
+    <script src="/WebpackTut/src/js/signup-validation.js"></script>
+    <script src="/WebpackTut/src/js/addition.js"></script>
+    <script src='/webpacktut/src/index.js'></script> -->
+    <script src="/WebpackTut/dist/main.js"></script>
+
+</body>
+
+</html>

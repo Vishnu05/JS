@@ -101,7 +101,7 @@ google.com/file - resource
 ------------------------------------------
 
 sharding  - databases ? technique
-latency 
+latency - The delay between from request and response due to network  
 round robin method
 
 The question of whether a computer can think is no more interesting than the question of whether a submarine can swim.

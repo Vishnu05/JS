@@ -32,7 +32,7 @@ arr.pop()
 
 arr.push('Adding a element');
 
-let arr = [21, 'age', true, { company: 'capgemini', fun() { return 'array inside a object and function' } }, function () {
+ arr = [21, 'age', true, { company: 'capgemini', fun() { return 'array inside a object and function' } }, function () {
     return 'function call'
 }];
 
@@ -128,3 +128,7 @@ function th(invar) {
 }
 
 console.log(th('Science'))
+
+let arrr = [1, 4, 6 ,8, 10]
+
+console.log(arr.map(x => x * 2))
