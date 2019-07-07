@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script src="/js/gauth.js"></script>
+    <script src="/js/DOM/Elements.js"></script>
     <title>Rocj Paper</title>
 
-    <!-- <script>
+    <script>
         let oncl = function () {
             alert('DOM ')
         }
@@ -16,17 +16,30 @@
             document.getElementById
             console.log(aba)
         }
-    </script> -->
+
+        function fun() {
+            let st = setInterval(() => {
+                console.log('call back function makes javascript asynchronous')
+            }, 1000);
+
+            /** st is not a function  */
+            st()
+            clearInterval(st, 5000)
+        }
+    </script>
 </head>
 
 <body>
 
     <div>
-        <input id='code' type="button" onclick="oncl()" value="JS Onclick">
+        <input id='code' type="button" onmousemove="oncl()" value="JS Onclick">
     </div>
 
+    <br><br>
     <div>
-        <input type="text" id="code1" oninput="fun()" placeholder="type here...">
+        <input
+            style="padding: 20px; background-color: aquamarine; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"
+            type="text" id="code1" oninput="fun()" placeholder="Type here... It will not be fun">
     </div>
 
 </body>

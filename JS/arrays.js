@@ -32,7 +32,7 @@ arr.pop()
 
 arr.push('Adding a element');
 
- arr = [21, 'age', true, { company: 'capgemini', fun() { return 'array inside a object and function' } }, function () {
+arr = [21, 'age', true, { company: 'capgemini', fun() { return 'array inside a object and function' } }, function () {
     return 'function call'
 }];
 
@@ -50,7 +50,7 @@ console.log(arr)
  * these two are more costly when compared to pop & push 
  * each and every element has to be shifted accordinly 
 */-
-arr.unshift('Jon doe'); console.log(arr); //arr.shift()
+    arr.unshift('Jon doe'); console.log(arr); //arr.shift()
 //arr.length = 1; //truncating the array element by giving the size of array
 console.log(arr)
 
@@ -129,6 +129,55 @@ function th(invar) {
 
 console.log(th('Science'))
 
-let arrr = [1, 4, 6 ,8, 10]
+let arrr = [1, 4, 6, 8, 10]
 
 console.log(arr.map(x => x * 2))
+
+/** .map, filter, reduce 
+ *  map can iterate over the object in array by the call back function 
+ *  Map is used to iterate all the elements by callBack function
+ *  Reduce - 
+ *  Filter - make  condtion and return values 
+*/
+
+
+let filters = [{ id: 1, name: 'vishnu' }, { id: 2, name: 'Thamizharasan' }, { id: 3, name: 'Capgemini' }, { id: 4, name: 'software engineer' }]
+
+console.log(filters.map(filters => console.log(filters.id)))
+let maps = filters.map(filters => filters.id)
+console.log(' this is how maps iterates... swag map function ' + maps)
+maps = filters.map(filters => filters.name)
+
+console.log(maps)
+console.log(filters)
+
+let reduceFun = [{ salary: 1000, id: 3, currentlyEmployed: true, name: 'Abc' },
+{ salary: 1000, id: 34, currentlyEmployed: true, name: 'amz' },
+{ salary: 23423, id: 90, currentlyEmployed: false, name: 'cg' },
+{ salary: 43000, id: 65, currentlyEmployed: true, name: 'boi' },
+{ salary: 60000, id: 22, currentlyEmployed: false, name: 'fb' }
+]
+
+
+/** getting all the salary  */
+console.log(reduceFun.map(reduceFun => reduceFun.salary))
+
+/** Accumulation ??  Reduce */
+let reduceVar = reduceFun.reduce((acc, reduceFun) => reduceFun.salary + acc, 0)
+console.log('Reduce array function : ' + reduceVar)
+console.log('Sums up : ' + filters.reduce((params, filters) => params + filters.id, 0))
+console.log('Reduce a ' + filters.reduce(filters => filters))
+
+/** filters  */
+
+let filtersArray = filters.filter(filters => filters.name === 'vishnu')
+console.log('Filters in javaScript arrays : ' + filters)
+
+let numbers = [1, 2, 3, 4, 5, 6, 7]
+console.log(numbers.map(numbers => numbers))
+/** arguments ??  */
+console.log(numbers.reduce((acc, ni) => acc + ni))
+/** Filters  */
+console.log('filters function : ' + numbers.filter(numbers => numbers > 3))
+console.error('to print error message console.error() is used')
+
