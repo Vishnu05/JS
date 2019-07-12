@@ -226,3 +226,9 @@ Artifact id - This is project id for creating a maven project
 group id - This is like super class which a unique id will be created in this and it will be used across all the project 
 version id - version id is similar what version we need to use or download
 Maven is not just a dependency downloading thing it is more for build, develop, test, production
+
+
+distributed and parallel systems 
+
+fault tolerance
+buffer handler 

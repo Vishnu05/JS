@@ -18,13 +18,14 @@
         }
 
         function fun() {
-            let st = setInterval(() => {
+            setTimeout(() => {
                 console.log('call back function makes javascript asynchronous')
             }, 1000);
 
-            /** st is not a function  */
-            st()
-            clearInterval(st, 5000)
+            /** st is not a function and the setTimeout and setInterval which will loaded while the script loads 
+             * there is no need of function call to make the request */
+            //st()
+           // clearInterval(st, 5000)
         }
     </script>
 </head>
