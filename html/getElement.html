@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script src="/js/DOM/Elements.js"></script>
+   
     <title>Rocj Paper</title>
 
     <script>
@@ -19,7 +19,7 @@
 
         function fun() {
             setTimeout(() => {
-                console.log('call back function makes javascript asynchronous')
+               // console.log('call back function makes javascript asynchronous')
             }, 1000);
 
             /** st is not a function and the setTimeout and setInterval which will loaded while the script loads 
@@ -40,9 +40,31 @@
     <div>
         <input
             style="padding: 20px; background-color: aquamarine; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"
-            type="text" id="code1" oninput="fun()" placeholder="Type here... It will not be fun">
+            type="text" id="code1" oninput="fun()" placeholder="Type here... It will not be fun" onclick="addelementDynamic()" onkeyup="tpe">
+            <button type="submit" onclick="tpe()">Add to List</button>
     </div>
 
+
+    <!-- Creating a new label element in dom using createElement event -->
+
+    <div id="cret">
+        <label for="">This is element</label>
+
+        <ul id="ullist">
+            <li>One</li>
+            <li>Two</li>
+        </ul>
+    </div>
+
+    <div>
+        <input type="text" name="" id="keyBo" />
+    </div>
+
+    <div>
+        <p id='adeven'></p>
+    </div>
+
+    <script src="/js/DOM/Elements.js"></script>
 </body>
 
 </html>
