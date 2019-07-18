@@ -31,5 +31,20 @@ function tpe() {
  let keyBo = document.getElementById('keyBo')
  console.dir("ji")
 
- let adevn = document.getElementById('adeven')
- adevn.addEventListener()
+//  let adevn = document.getElementById('adeven')
+//  adevn.addEventListener()
+
+let scope = 'hi'
+
+if (true) {
+    scope = 1 
+}
+
+let sp = () => {
+    console.log(scope)
+    scope = 'Values are changed when you declare as global variable '
+}; 
+
+sp()
+
+console.log(scope)
