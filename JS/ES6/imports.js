@@ -1,7 +1,14 @@
 
+/** A big mistake for a very long time I have been made is I was not mentioning the extension of file like (.js) instead
+ *  giving the file name without the extension and anothe one is giving the values in curly braces(before I was not using curly
+ *  braces it showed me error)
+ */
 
-import hello from "./ES6/exports";
+import { hello , vari } from "./exports.js";
+import { a, b, c, func } from "./exports.js"
+// import vari from "./exports.js" this is throwing error because of curly braces
 
 hello()
 console.log('hiiiii')
-
+console.table(a, b, c, func)
+console.table(vari, a)
