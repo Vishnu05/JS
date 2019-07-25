@@ -42,6 +42,7 @@ function tpe() {
  let keyBo = document.getElementById('keyBo')
  console.dir("ji")
 
+<<<<<<< HEAD
 //  let adevn = document.getElementById('adeven')
 //  adevn.addEventListener()
 
@@ -59,3 +60,7 @@ let sp = () => {
 sp()
 
 console.log(scope)
+=======
+ let adevn = document.getElementById('adeven')
+ adevn.addEventListener()
+>>>>>>> bb6be55b15788c8cf8759a94f32795fdf97a0225

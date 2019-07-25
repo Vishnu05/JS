@@ -245,3 +245,4 @@ normalization and denormalization in db
 horizontal and vertical scaling - adding more machine horizontal, adding more resource like ram and power is called 
 single point of failure can be avoided in horizontal where vertical one server takes more loads and lead to huge load on
 server sharding is done in horizontal..
+buffer handler 
