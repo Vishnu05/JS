@@ -135,6 +135,7 @@ console.log(arr.map(x => x * 2))
 
 /** .map, filter, reduce 
  *  map can iterate over the object in array by the call back function 
+ *  map methos creates a new array with calling of every new element
  *  Map is used to iterate all the elements by callBack function
  *  Reduce - 
  *  Filter - make  condtion and return values 
