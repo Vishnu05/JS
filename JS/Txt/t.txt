@@ -232,3 +232,16 @@ distributed and parallel systems
 
 fault tolerance
 buffer handler 
+
+why addEventlistener ? for a specific id ? or a element in dom to do operations 
+
+bitstream and byte stream are same in somehow 
+where byte stream consist of 8 octects like 8 bits combined to into single one. Objects are passed through the net by streams 
+
+kernel ?? 
+
+normalization and denormalization in db
+
+horizontal and vertical scaling - adding more machine horizontal, adding more resource like ram and power is called 
+single point of failure can be avoided in horizontal where vertical one server takes more loads and lead to huge load on
+server sharding is done in horizontal..
