@@ -19,6 +19,17 @@ let adlist = document.createElement('li')
 adlist.textContent = 'List has been created successfully and added to dom node!!'
 ullist.appendChild(adlist)
 console.log(ullist)
+let divs = document.createElement('input')
+//document.body.appendChild(divs) ;
+console.log(divs)
+console.dir(divs)
+
+ /** The element used to add a new node in dom  */
+const newList = document.getElementById('lll')
+let lis = document.createElement('li')
+lis.textContent = 'capgemini'
+console.log(lis)
+newList.appendChild(lis)
 
 function tpe() {
     let code1 = document.getElementById('code1')
