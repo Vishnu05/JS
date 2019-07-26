@@ -28,8 +28,8 @@ function tpe() {
     ullist.appendChild(liss)
 }
 
- let keyBo = document.getElementById('keyBo')
- console.dir("ji")
+let keyBo = document.getElementById('keyBo')
+console.dir("ji")
 
 //  let adevn = document.getElementById('adeven')
 //  adevn.addEventListener()
@@ -37,14 +37,34 @@ function tpe() {
 let scope = 'hi'
 
 if (true) {
-    scope = 1 
+    scope = 1
 }
 
 let sp = () => {
     console.log(scope)
     scope = 'Values are changed when you declare as global variable '
-}; 
+};
 
 sp()
 
 console.log(scope)
+
+/** MouseEvent */
+
+let paras = document.getElementById('paras')
+console.log(paras)
+
+paras.addEventListener('mouseover', () =>
+    paras.style.color = "red",
+    paras.style.fontSize = '10px')
+
+paras.addEventListener('mouseleave', () =>
+    paras.style.color = 'black',
+    paras.style.fontSize = '30px'
+)
+
+paras.addEventListener('mousemove', () =>
+    paras.innerHTML = 'values are changed and color of the font changes to red'
+)
+
+paras.addEventListener('mouseleave', () => paras.innerHTML = 'This is the text which will change whenever the mouse moves')

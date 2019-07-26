@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   
+
     <title>Rocj Paper</title>
 
     <script>
@@ -19,13 +19,13 @@
 
         function fun() {
             setTimeout(() => {
-               // console.log('call back function makes javascript asynchronous')
+                // console.log('call back function makes javascript asynchronous')
             }, 1000);
 
             /** st is not a function and the setTimeout and setInterval which will loaded while the script loads 
              * there is no need of function call to make the request */
             //st()
-           // clearInterval(st, 5000)
+            // clearInterval(st, 5000)
         }
     </script>
 </head>
@@ -40,8 +40,9 @@
     <div>
         <input
             style="padding: 20px; background-color: aquamarine; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"
-            type="text" id="code1" oninput="fun()" placeholder="Type here... It will not be fun" onclick="addelementDynamic()" onkeyup="tpe">
-            <button type="submit" onclick="tpe()">Add to List</button>
+            type="text" id="code1" oninput="fun()" placeholder="Type here... It will not be fun"
+            onclick="addelementDynamic()" onkeyup="tpe">
+        <button type="submit" onclick="tpe()">Add to List</button>
     </div>
 
 
@@ -63,6 +64,8 @@
     <div>
         <p id='adeven'></p>
     </div>
+
+    <span id="paras">This is the text which will change whenever the mouse moves </span>
 
     <script src="/js/DOM/Elements.js"></script>
 </body>
