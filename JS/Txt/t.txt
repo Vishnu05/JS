@@ -238,7 +238,9 @@ why addEventlistener ? for a specific id ? or a element in dom to do operations
 bitstream and byte stream are same in somehow 
 where byte stream consist of 8 octects like 8 bits combined to into single one. Objects are passed through the net by streams 
 
-kernel ?? 
+kernel - The kernel is the central module of an operating system (OS). ... 
+Typically, the kernel is responsible for memory management, process and task management, and disk management. 
+The kernel connects the system hardware to the application software. Every operating system has a kernel.
 
 normalization and denormalization in db
 
