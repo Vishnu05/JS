@@ -1,11 +1,13 @@
 
-import {email, pwd, submit} from "./globalVariable"
+import { email, pwd, submit } from "./globalVariable.js"
 
 submit.disabled = true
-export function validate() {
+function validate() {
     submit.disabled = true
 
     if (email.value != '' && pwd.value != '') {
         submit.disabled = false
     }
 }
+
+export { validate }

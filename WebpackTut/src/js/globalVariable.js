@@ -1,7 +1,7 @@
 
 /** form validation */
 
-export {email, submit, pwd, pp, wp, one, two, result}
+
 
 let email = document.getElementById('em')
 let submit = document.getElementById('sub')
@@ -16,4 +16,6 @@ let wp = document.getElementById('wp')
 
 let one = document.getElementById('one')
 let two = document.getElementById('two')
-let result = document.getElementById('result') 
+let result = document.getElementById('result')
+
+export { email, submit, pwd, pp, wp, one, two, result }
