@@ -10,3 +10,6 @@ let abs = {
 
 let inht = document.getElementById('sd')
 // inht.innerHTML = ''F
+
+let company : string = 'facebook'
+console.log(company)
