@@ -229,6 +229,11 @@ Maven is not just a dependency downloading thing it is more for build, develop, 
 
 
 distributed and parallel systems 
+parallel systems - where the task can run at once, ex multitasking I suppose, Process are heavy, threads are light
+process occupy more memory thread can run on the process with many threads but it is efficient 
+concurent systems - one thread has to be finish the process and it will continue the next one 
+distributed systems - where a request can be divided or send to across multipe systems rather than single system which makes more 
+efficient good for scalability for larger applications
 
 fault tolerance
 buffer handler 
@@ -236,13 +241,41 @@ buffer handler
 why addEventlistener ? for a specific id ? or a element in dom to do operations 
 
 bitstream and byte stream are same in somehow 
+<<<<<<< HEAD
 where byte stream consist of 8 octects like 8 bits combined to into single one. Objects are passed through the net by streams 
 
 kernel ?? 
+=======
+where byte stream consist of 8 octects like 8 bits combined to into single one. Objects are passed through the net by streams
+objects will convert into array of byte streams (0's and 1's)  
+
+kernel - The kernel is the central module of an operating system (OS). ... 
+Typically, the kernel is responsible for memory management, process and task management, and disk management. 
+The kernel connects the system hardware to the application software. Every operating system has a kernel.
+>>>>>>> 62f00f49cbc0f70f040efce80dcde201a8876180
 
 normalization and denormalization in db
 
 horizontal and vertical scaling - adding more machine horizontal, adding more resource like ram and power is called 
 single point of failure can be avoided in horizontal where vertical one server takes more loads and lead to huge load on
 server sharding is done in horizontal..
+<<<<<<< HEAD
 buffer handler 
+=======
+
+web server and appication server 
+
+web server which works on mostly http protocol and static content like, images, files and multimedida it is only for web based application
+appication server mostly work on business logic, http protocol, dynamic content multithreading, enterprise applications
+
+load balancing - when a client send request to the server it will not hit directlly to one server. Load balancing technique will separate 
+each request (not) there will be more servers so it will go according to the alogorithm which server is good, health check for servers 
+which server is not facing downtime. checking the server whether it is running or not properly. if not request will not be re-routed to 
+the corresponding server untill that server is up and re-running again.
+
+downtime - time during which a machine, especially a computer, is out of action or unavailable to use.
+throughput - the amount of material or items passing through a system or process 
+
+https://www.chromium.org/Home/chromium-security/corb-for-developers
+https://www.chromestatus.com/feature/5629709824032768
+>>>>>>> 62f00f49cbc0f70f040efce80dcde201a8876180
