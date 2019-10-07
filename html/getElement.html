@@ -19,7 +19,7 @@
 
         function fun() {
             setTimeout(() => {
-                // console.log('call back function makes javascript asynchronous')
+                 console.log('call back function makes javascript asynchronous')
             }, 1000);
 
             /** st is not a function and the setTimeout and setInterval which will loaded while the script loads 
@@ -37,11 +37,14 @@
     </div>
 
     <br><br>
+
+    <!-- when ever there is a input is given in input feilds the function will be triggred like keyup each char or empty 
+     space can trigger the function -->
     <div>
         <input
             style="padding: 20px; background-color: aquamarine; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"
-            type="text" id="code1" oninput="fun()" placeholder="Type here... It will not be fun"
-            onclick="addelementDynamic()" onkeyup="tpe">
+            type="text" id="code1" oninput="fun()" placeholder="Type here... It will not be fun" >
+            <!-- onclick="addelementDynamic" onkeyup="typ()"> -->
         <button type="submit" onclick="tpe()">Add to List</button>
     </div>
 
@@ -66,8 +69,7 @@
     </div>
 
     <span id="paras">This is the text which will change whenever the mouse moves </span>
-
-    <script src="/js/DOM/Elements.js"></script>
+   
     <div>
 
         <ul id='lll'>
@@ -78,6 +80,7 @@
 
     </div>
 
+    <script src="/js/DOM/Elements.js"></script>
 </body>
 
 </html>

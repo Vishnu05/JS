@@ -11,14 +11,14 @@ num = 123
 let df;
 console.log(df)
 
- let a=5
+let a = 5
 
 // prompt(a)
 //alert('value')
 
-function b(){
-    
-    return "value" 
+function b() {
+
+    return "value"
 }
 
 // ` backtics are one way to say this is string and with help of ${we can bind data}
@@ -26,11 +26,11 @@ console.log(`rock paper "game"${''}` + "  " + typeof a)
 
 
 
-function param(value,name){
+function param(value, name) {
     return value + name
 }
 
-console.log(param(1,'name'))
+console.log(param(1, 'name'))
 
 console.log(b())
 function callback(confirms, yes, no) {
@@ -41,18 +41,18 @@ function callback(confirms, yes, no) {
     else no()
 }
 
-let bc=123
-let bcc=String(bc)
+let bc = 123
+let bcc = String(bc)
 console.log(bc)
 
 callback('callback function', function () { alert('request') }, function () {
     alert('response')
 })
 
-let cg={
+let cg = {
     id: 13123,
-    name:"vishnu",
-    location : "chennai",
+    name: "vishnu",
+    location: "chennai",
     age: true
 }
 
