@@ -229,6 +229,11 @@ Maven is not just a dependency downloading thing it is more for build, develop, 
 
 
 distributed and parallel systems 
+parallel systems - where the task can run at once, ex multitasking I suppose, Process are heavy, threads are light
+process occupy more memory thread can run on the process with many threads but it is efficient 
+concurent systems - one thread has to be finish the process and it will continue the next one 
+distributed systems - where a request can be divided or send to across multipe systems rather than single system which makes more 
+efficient good for scalability for larger applications
 
 fault tolerance
 buffer handler 
@@ -236,13 +241,53 @@ buffer handler
 why addEventlistener ? for a specific id ? or a element in dom to do operations 
 
 bitstream and byte stream are same in somehow 
-where byte stream consist of 8 octects like 8 bits combined to into single one. Objects are passed through the net by streams 
+where byte stream consist of 8 octects like 8 bits combined to into single one. Objects are passed through the net by streams
+objects will convert into array of byte streams (0's and 1's)  
 
-kernel ?? 
+kernel - The kernel is the central module of an operating system (OS). ... 
+Typically, the kernel is responsible for memory management, process and task management, and disk management. 
+The kernel connects the system hardware to the application software. Every operating system has a kernel.
 
 normalization and denormalization in db
 
 horizontal and vertical scaling - adding more machine horizontal, adding more resource like ram and power is called 
 single point of failure can be avoided in horizontal where vertical one server takes more loads and lead to huge load on
 server sharding is done in horizontal..
-buffer handler 
+
+web server and appication server 
+
+web server which works on mostly http protocol and static content like, images, files and multimedida it is only for web based application
+appication server mostly work on business logic, http protocol, dynamic content multithreading, enterprise applications
+
+load balancing - when a client send request to the server it will not hit directlly to one server. Load balancing technique will separate 
+each request (not) there will be more servers so it will go according to the alogorithm which server is good, health check for servers 
+which server is not facing downtime. checking the server whether it is running or not properly. if not request will not be re-routed to 
+the corresponding server untill that server is up and re-running again.
+
+downtime - time during which a machine, especially a computer, is out of action or unavailable to use.
+throughput - the amount of material or items passing through a system or process 
+
+https://www.chromium.org/Home/chromium-security/corb-for-developers
+https://www.chromestatus.com/feature/5629709824032768
+
+
+ci/cd - continous intergration / continous deployment / continous delivery
+starting building the code after it is done unit test is done, but tdd is better; after unit test is done it will be commited to the
+central repositary(remote like github, gitlab, bitbucket) there will be some automation will be set of which is intergration testing 
+where all the developer will commit the code to remote and it will build the process.
+after doing this each time we commit the code to remote automatically build will start. continous deployment is also similar to this 
+where after committing it will be directly deployed in the production server. 
+This is only for business model initially where we don't need to wait for very long time to see our product; we can see what is happening 
+exactly in our code we can change if something goes wrong 
+ex: youtube will get updated lot of time in a day where google engineer make this process I suppose  
+
+request/response and event-driven-architecture
+
+messaging queue/ data queue
+
+where the data or any other type of data will be streamed in queues, millions of records or data can be processed at any point of time 
+with the help of jms, kakfa and messaging queue. 
+ex. when ever a new data/record found in the database it will eventually pick it up and sends to the destination and one good examples are 
+pub/sub where social media like (fb, twitter, instagram, email promotion) when someone post a message it will broadcast to around millions 
+of people at the time data will be sent to them, Broadcasting can also be said there are lot of other things can be done by this (i don't know)
+this is read and write operation also can be done in this, messaging, storing, streaming and processing

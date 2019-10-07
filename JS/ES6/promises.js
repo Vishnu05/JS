@@ -25,3 +25,7 @@ let promise1 = new Promise((resolve, reject) => {
 })
 
 console.log(promise1)
+
+/** This is example for another modules  */
+
+export let examp = 'why fetch are better than promises'

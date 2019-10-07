@@ -4,9 +4,11 @@
 
 //email.addEventListener('click', may)
 
-import {email} from './js/globalVariable';
-import {validate} from './js/signup-validation'
+import { email } from './js/globalVariable.js'
+import { validate } from './js/signup-validation.js'
+import { ad } from "./js/addition.js";
 
+ad()
 validate()
 
 email.addEventListener('mouseover', () => console.log('hh'))

@@ -157,7 +157,7 @@ console.log('functoin call : ' + hoist(gh))
 var gh; //if we change to let the variable becames undefined 
 
 //anonymous function ?
-(function () {
+(function () {          
     console.log('lexical function ')
 })();
 console.log();
@@ -280,5 +280,5 @@ console.log(a);
 bind()
 
 function bind() {
-    
+
 }

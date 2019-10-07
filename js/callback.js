@@ -12,7 +12,7 @@ let fus = (a, b) => a + b;
 
 console.log(fus(1, 2))
 
-let a = () => console.log('alert(12)') 
+let a = () => console.log('alert(12)')
 a()
 
 console.log()
@@ -41,7 +41,7 @@ obj = {
 }
 
 let obje = obj
- 
+
 console.log('cloning the obj' + obj)
 
 obj = {
@@ -78,33 +78,33 @@ let schedule = {};
 
 schedule.check = 'notNull'
 
-var n=1
-var n=2 //redeclaring with let throws error
+var n = 1
+var n = 2 //redeclaring with let throws error
 
-let emp={
-    jasmine:1000,
-    john:2000,
-    jane:3000,
-    123:'true'
+let emp = {
+    jasmine: 1000,
+    john: 2000,
+    jane: 3000,
+    123: 'true'
 }
 
 console.log(emp[123])
-b=0;
-for(let a in emp){
-    b+=emp[a]
+b = 0;
+for (let a in emp) {
+    b += emp[a]
 }
 console.log(b)
 
-let local={
+let local = {
     name: 'jon doe'
 }
 
-let reference=local;
+let reference = local;
 
-console.log(reference.name+" "+'local.name')
+console.log(reference.name + " " + 'local.name')
 
-a={
-    fun(){
+a = {
+    fun() {
         alert(1)
     }
 }

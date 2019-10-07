@@ -1,6 +1,7 @@
 
 /** Creating dom elements  */
 
+/** Creating a new node and adding to the dom  */
 
 console.log('this is creating events in dom ~')
 
@@ -12,7 +13,7 @@ let eleCret = document.createElement('label')
 eleCret.textContent = 'New element is created...'
 console.log(eleCret)
 console.log(nos)
-nos.appendChild(eleCret)
+ nos.appendChild(eleCret)
 
 let ullist = document.getElementById('ullist')
 let adlist = document.createElement('li')
@@ -24,7 +25,7 @@ let divs = document.createElement('input')
 console.log(divs)
 console.dir(divs)
 
- /** The element used to add a new node in dom  */
+/** The element used to add a new node in dom  */
 const newList = document.getElementById('lll')
 let lis = document.createElement('li')
 lis.textContent = 'capgemini'
@@ -39,28 +40,55 @@ function tpe() {
     ullist.appendChild(liss)
 }
 
- let keyBo = document.getElementById('keyBo')
- console.dir("ji")
+let keyBo = document.getElementById('keyBo')
+console.dir("ji")
 
-<<<<<<< HEAD
 //  let adevn = document.getElementById('adeven')
 //  adevn.addEventListener()
 
+/** MouseEvent */
+
+let  s = document.getElementById('paras')
+console.log(paras)
+
+paras.addEventListener('mouseover', () =>
+    paras.style.color = "red",
+    paras.style.fontSize = '10px')
+
+paras.addEventListener('mouseleave', () =>
+    paras.style.color = 'black',
+    paras.style.fontSize = '30px'
+)
+
+paras.addEventListener('mousemove', () =>
+    paras.innerHTML = 'values are changed and color of the font changes to red'
+)
+
+
+//  let adevn = document.getElementById('adeven')
+//  adevn.addEventListener()
+
+
+/**
+ *  Interview question which is asked by dinesh that scope will not be changed; but it will change
+ */
 let scope = 'hi'
 
 if (true) {
-    scope = 1 
+    scope = 1
 }
 
-let sp = () => {
+let sp1 = () => {
     console.log(scope)
     scope = 'Values are changed when you declare as global variable '
-}; 
+};
 
-sp()
+sp1()
 
 console.log(scope)
-=======
- let adevn = document.getElementById('adeven')
- adevn.addEventListener()
->>>>>>> bb6be55b15788c8cf8759a94f32795fdf97a0225
+
+let adevn = document.getElementById('adeven')
+//adevn.addEventListener()
+
+paras.addEventListener('mouseleave', () => paras.innerHTML = 'This is the text which will change whenever the mouse moves')
+
