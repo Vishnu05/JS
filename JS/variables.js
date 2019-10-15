@@ -45,9 +45,9 @@ let bc = 123
 let bcc = String(bc)
 console.log(bc)
 
-callback('callback function', function () { alert('request') }, function () {
-    alert('response')
-})
+// callback('callback function', function () { alert('request') }, function () {
+//     alert('response')
+// })
 
 let cg = {
     id: 13123,
@@ -93,4 +93,7 @@ for (let i of movies) {
     console.table(i)
 }
 
+/** Number are different in js it is dynamic typing */
+let numcheck = 0.1 + 0.2;
+console.log(numcheck)
 

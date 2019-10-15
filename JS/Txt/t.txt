@@ -291,3 +291,44 @@ ex. when ever a new data/record found in the database it will eventually pick it
 pub/sub where social media like (fb, twitter, instagram, email promotion) when someone post a message it will broadcast to around millions 
 of people at the time data will be sent to them, Broadcasting can also be said there are lot of other things can be done by this (i don't know)
 this is read and write operation also can be done in this, messaging, storing, streaming and processing
+https://google.com/robot.txt ?? amazon also have this! it shows which need to be allowed and which needs to be disallowed 
+like links and other resources for web crawler. where google bot, and other search engine will not scan or index in there engine 
+
+proxy servers - it acts as a intermediate between the client and server, In computer networks, 
+a proxy server is a server that acts as an intermediary for requests from clients seeking resources from other servers
+
+dmz - demilitarized zone restricted access to the servers or databases to secure the data
+
+continuous function and discrete function
+continuous function - cro signal and sin wave is example of continuous singal in (ECE)
+discrete - are like digital 0's and 1's in form of graph 
+
+http-tunneling : HTTP tunneling is used to create a network link between two computers in conditions of restricted network connectivity 
+including firewalls, NATs and ACLs, among other restrictions. 
+The tunnel is created by an intermediary called a proxy server which is usually located in a DMZ.
+
+git:
+
+git branch -a used to see hidden branch 
+git checkout branchname 
+-- to make a change or pull latest commit from master branch to local --
+git fetch origin - no idea 
+git merge origin/master - to pull all the changes from the master to any other branches (like development or local etc..)
+
+"A" index has been added in the .git 
+"M" changes has been made in the existing files which need to be commited 
+"U" untracked which is not currently tracked by .git it should be moved to the stagging area 
+"C" both modified
+
+git branch -d branchName - it will delete the branch, but we should not be in this branch need to switch other branch and delete
+git checkout -b new_branchname - creating and switching to this new branch which is created
+git branch -m new_branchname - this will change the name of current branch name to new branchname
+git branch merge origin/branchname - merge the current changes to branch 
+
+git chekcout - is super cool thing where the deleted file can be restored back again and used to switch branchs also
+
+git checkout "file name for recovering from the deleted"
+git checkout . used to recover all the deleted files but it should not be commited 
+
+to move to existing commit we can also use git checkout "commit id " first 8 digit is enough to move from one commit to another commit 
+and make changes and request for a merge 
