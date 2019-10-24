@@ -332,3 +332,34 @@ git checkout . used to recover all the deleted files but it should not be commit
 
 to move to existing commit we can also use git checkout "commit id " first 8 digit is enough to move from one commit to another commit 
 and make changes and request for a merge 
+
+ip whitelist - ip whitelist which will denies and have control over the application web and apps. it is like restrictions
+where the web or apps can be only accessed, certian websites can be only accessed through certian network ip everything will be 
+get rejected for security purpose
+
+ip blacklist - it is oppisite of whitelist which will allow control to sites most of the cases
+
+json threat protection - json threat protection is used to avoid or inject the json from nesting or data leak for security problem
+by this we can give object properties restrictions how many character should have lenght of the string can it be modified or not 
+this is primarly to avoid the security risk which can cause to attack (xml threat protection is also similar except the structure will
+be varying)
+
+static ip - 
+
+dynamic ip
+
+go-cd - for continous intergration and continous development which 
+which has two types 1. packaged pipeline 2. depolyment pipeline 
+first we need to create the pipleine based on what group(under) then pipleine will be named on the naming standards after that 
+what kind of version control should we need to use should mention ex: git, svn and mercurial and then mentioning git url or pulling the
+code and it will start to build it. As we define in the pom package would be jar or zip. There are automatic polling and manual polling 
+for this automatic polling is whenever we make changes in our project and pushed to central repositary the go-cd will pick it up and 
+start the build work(branchs should be mentioned to pull the code). Manual will be we have to trigger the code everytime whenever we make
+changes. After the package is build it will be published to the nexus repositary.
+creating the pipeline we need to mention which environment should comes under so the package will be pushed to the nexus according to that
+Template - is like set of rule how the build should happen when the pipeline is triggered there will be default template how the code should
+be build. we can also make how to run by writting shell scripting where to start and how to run the code, on what order it should execute
+the build 
+Build can be done by maven, ant and gradle which is more poplular 
+agents, jobs no idea 
+template -> stage -> jobs - where jobs will run the shell script 
