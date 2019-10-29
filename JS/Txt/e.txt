@@ -100,3 +100,6 @@ compulsions -
 
 volatile - easily evaporated at normal temperature, evaporate (this is chemistry)
 stance - the way in which someone stands, especially when deliberately adopted. human posture, body position, pose and attitude
+
+darn - mend (a hole in knitted material) by interweaving yarn with a needle.
+pedantary - excessive concern with minor details and rules, showing off of knowledge (brag)
