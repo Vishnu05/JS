@@ -333,6 +333,19 @@ git checkout . used to recover all the deleted files but it should not be commit
 to move to existing commit we can also use git checkout "commit id " first 8 digit is enough to move from one commit to another commit 
 and make changes and request for a merge 
 
+git merge --abort - for stoping the mergering, 
+merge conflicts happens whenever there is difference between local commit and remote commit it can be resolved by incoming changes
+by accepting it or rejecting it  when the local and remote overlaps with different commits where developers commits the code
+
+git reset --hard 
+
+merge conflicts - the head is the incoming changes and after that current changes which we have made will decide to keep the 
+incoming changes, accept current changes, accept both changes.
+<<<<< ==== HEAD "incoming changes from remote which needs to decided " === >>
+accept both changes - it will merge both the changes from the remote and local
+accept incoming changes - changes made in remote are overwritten in local 
+accept current changes - changes made in local which are correct and good to go
+
 ip whitelist - ip whitelist which will denies and have control over the application web and apps. it is like restrictions
 where the web or apps can be only accessed, certian websites can be only accessed through certian network ip everything will be 
 get rejected for security purpose
@@ -350,6 +363,8 @@ dynamic ip
 
 go-cd - for continous intergration and continous development which 
 which has two types 1. packaged pipeline 2. depolyment pipeline 
+packaged pipleine -
+deployment pipeline -  
 first we need to create the pipleine based on what group(under) then pipleine will be named on the naming standards after that 
 what kind of version control should we need to use should mention ex: git, svn and mercurial and then mentioning git url or pulling the
 code and it will start to build it. As we define in the pom package would be jar or zip. There are automatic polling and manual polling 
@@ -363,3 +378,33 @@ the build
 Build can be done by maven, ant and gradle which is more poplular 
 agents, jobs no idea 
 template -> stage -> jobs - where jobs will run the shell script 
+
+gson - it is devloped by the google to serialize and deserialize the java objects to json
+
+polyfill - is a peace of javascript code which can run on old browsers to give latest functionality which do not support natively
+
+repl - read eval and print loop 
+
+cookies - cookies will are special values where it store the site information in browser when ever a user ask for the website it doesn't need
+to know about all the details of webiste like language location whenever it loads it makes faster instead of searching all this again
+and details about what needs to be given to user. they go for cookies and it also play well with ad.
+https://policies.google.com/technologies/types
+when we ask for weather or some important about where we stay it helps us to give the result 
+for location related services they uses and track ip address from where they come from and give apporpirate response
+
+ad hoc - a decentralized network for mobile and web for wireless network 
+
+http status 
+200 this status is all about ok and successful
+300 
+400 client error 
+500 server error 
+for return response and other http responses it helps us to identify the request and to debug where the appilcation is getting error
+
+houseKeeping - it is process of optimization and keeping the backup files, disk clean up, defragmentation, scan disk, antivirus checkup
+whether the computer is running properly or not
+
+build - in computer programming building is the task where it will compile, test, generate binary code linting and packaging
+which can build the project up and run the application. for small application it can be compiled for larger one it is totally a 
+different story and managing that is hetic so here it comes the maven, gradle and npm to build the project. It combines all the code and
+able to deploy it in one stand to run the application (this is assumptions more research required)
