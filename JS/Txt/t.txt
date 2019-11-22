@@ -408,3 +408,15 @@ build - in computer programming building is the task where it will compile, test
 which can build the project up and run the application. for small application it can be compiled for larger one it is totally a 
 different story and managing that is hetic so here it comes the maven, gradle and npm to build the project. It combines all the code and
 able to deploy it in one stand to run the application (this is assumptions more research required)
+The term build may refer to the process by which source code is converted into a stand-alone form that can be run on a computer or to 
+the form itself. One of the most important steps of a software build is the compilation process, where source code files are converted
+into executable code.
+
+how the files are transfer through the internet? LAN and celluar device (radio waves)
+how they are serialize and deserialize when they communicate in internet, object or any other forms? 
+packages which will broke into small piece and send over the communication network and other will receive and reconstruct all the 
+deconstructed packets and make into a single one.
+
+peer to peer ?
+nodes to cluster ?
+cluster?

@@ -1,4 +1,6 @@
 
+/*not every meaning is precise need more improvising*/
+
 ruts - a habit or pattern of behaviour that has become dull and unproductive but is hard to change
 tweak -
 tampering - interfere with something in order to make damage or unauthorized acess
@@ -122,4 +124,10 @@ tenure- the conditions under which the land or buildings held are occupied
 
 karoshi (japanesse) - overwork death, working to much 
 
-amortize - gradually write off the initial cost over a period, allocating cost 
+amortize - gradually write off the initial cost over a period, allocating cost, planning for something and allocating the budget
+
+bog , bogged - be or become stuck in mud or wet ground unable to move stuck, stuck - detained not able to do something
+
+rationale - a set of reasons or logical basis for a course of action or belief
+Reason is the capacity of consciously making sense of things, establishing and verifying facts, applying logic, 
+and adapting or justifying practices, institutions, and beliefs based on new or existing information
