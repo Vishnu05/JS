@@ -346,6 +346,8 @@ accept both changes - it will merge both the changes from the remote and local
 accept incoming changes - changes made in remote are overwritten in local 
 accept current changes - changes made in local which are correct and good to go
 
+git tag - 
+
 ip whitelist - ip whitelist which will denies and have control over the application web and apps. it is like restrictions
 where the web or apps can be only accessed, certian websites can be only accessed through certian network ip everything will be 
 get rejected for security purpose
@@ -420,3 +422,16 @@ deconstructed packets and make into a single one.
 peer to peer ?
 nodes to cluster ?
 cluster?
+
+netstat - to check the network statictics 
+netstat -ano: to check for avaialable port to running currently in machine
+
+netsh wlan - to check the network and wireless connectivity details 
+
+vi 
+
+q! without saving 
+wq! with saving 
+
+ls -l
+ls -lrt 

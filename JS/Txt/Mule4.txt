@@ -194,3 +194,8 @@ https://training.mulesoft.com/course/fundamentals4-quiz-diy
 error handling, data weave, raml, anpoint platform, http rest architecture
 
 lince.thomas@mulesoft.com
+
+munit mock  - it will bypass the flow and will return a value which we setup and that response will be given back or set as payload and it will further 
+proceed 
+mock basically will try to skip a component or flow according to our requirement. If we are trying to connect to externalize application and if we couldn't able to
+establish the connection we can use mock to skip the component or flow to bypass and return response should be set so it can do further tests
