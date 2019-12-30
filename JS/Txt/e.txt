@@ -131,3 +131,6 @@ bog , bogged - be or become stuck in mud or wet ground unable to move stuck, stu
 rationale - a set of reasons or logical basis for a course of action or belief
 Reason is the capacity of consciously making sense of things, establishing and verifying facts, applying logic, 
 and adapting or justifying practices, institutions, and beliefs based on new or existing information
+
+asymmetrical - where the equals half will not be in same shape 
+symmetrical - will have same shape when they are diverged or cut into two half 
