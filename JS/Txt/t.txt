@@ -337,6 +337,9 @@ git branch merge origin/branchname - merge the current changes to branch
 git rm filename - to remove the specific file in git 
 git rm --cached - soft delete ? of files in git 
 
+adding multiple files rather than whole bunch of files
+git add <fileName1> <fileName2> etc...
+
 git chekcout - is super cool thing where the deleted file can be restored back again and used to switch branchs also
 
 git checkout "file name for recovering from the deleted"
@@ -479,3 +482,25 @@ sonarqube - for checking the code quality and standards checking
 mule exams results 
 mule 4 - 603, 50.25
 mule 3 - 596, 47
+
+what is state management in react ?
+ex: if there are five forms in some application at the end of the fifth page only the submit button is there where the data will be sent to db to update 
+the details of what ever the user has entered unfortunately the user refresh page at 4 will all the data be lost ?
+with help of state management we can preserve the user data to have a good user experience and customer need not to type the whole application again from
+the starting. Redux helps to solve this problem 
+here are few questions 
+how the state management works, does it takes the memory of browser to store the information?
+browser will have sessions if the browser close does it destory all the data or preserve?
+
+why code readablity is important ?
+we can write code as much as we want at the end it is going to work that is fine. the question is here will other developer can understand what the heck 
+you have written or they can maintain your code?
+if we working on some solution it must be simple precise and other developer must able to understand that is the good practise of writting a elegant code 
+and the software maintainablity will be easy or else it will be pain in ass 
+understanding complex gonna cost lot of time and sometimes other can't even understand so to avoid that code should be neat clean and other people should 
+understand this is good coder. It also should follow the time and space complexity for better optimization of code 
+
+profiling - the recording and analysis of a person's psychological and behavioural characteristics, so as to asses or predict their capabilities in a 
+certain sphere or to assis in identifying categories of people
+In software engineering, profiling is a form of dynamic program analysis that measures, for example, the space or time complexity of a program, 
+the usage of particular instructions, or the frequency and duration of function calls.Most commonly, profiling information serves to aid program optimization
