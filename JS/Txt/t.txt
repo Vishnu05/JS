@@ -217,8 +217,8 @@ String - comparing string (equals method) or else it refer from the refernce and
 
 Maven - it is build tool for java and other purpose 
 Mainly used for dependency management for project 
-It has remote and local repositary, where remote repositary will have the all dependency to download, first it checks with the local repositary
-if there is no dependency in local repositary then it will automatically will download from the remote repositary
+It has remote and local repository, where remote repository will have the all dependency to download, first it checks with the local repository
+if there is no dependency in local repository then it will automatically will download from the remote repository
 Maven has many parts to do create, build, run, deploy 
 Pom - Project object Model, where all the configuration are made in this 
 Three important factor while creating dependency are
@@ -237,6 +237,14 @@ packaging
 plugin
 repository
 distributed management
+maven target - where the source code(binaries) will be compiled it will have all the project builds and test when ever a project is run the war or zip will be generated
+in the target to build the project to deploy the code faster. Deleting the target folder also doesn't matter it will be fine. When we recompile it 
+(needs more improvising)
+where mvn clean will delete all the target files and regenerate the target source files and it will create a new source code in that folder
+classpath -
+
+mvn clean - it will delete the target file and recreate the source code to compile able one to run the application. 
+like snapshot for packaging jar, war, pom this able to run the code 
 
 distributed and parallel systems 
 parallel systems - where the task can run at once, ex multitasking I suppose, Process are heavy, threads are light
@@ -283,7 +291,7 @@ https://www.chromestatus.com/feature/5629709824032768
 
 ci/cd - continous intergration / continous deployment / continous delivery
 starting building the code after it is done unit test is done, but tdd is better; after unit test is done it will be commited to the
-central repositary(remote like github, gitlab, bitbucket) there will be some automation will be set of which is intergration testing 
+central repository(remote like github, gitlab, bitbucket) there will be some automation will be set of which is intergration testing 
 where all the developer will commit the code to remote and it will build the process.
 after doing this each time we commit the code to remote automatically build will start. continous deployment is also similar to this 
 where after committing it will be directly deployed in the production server. 
@@ -330,10 +338,14 @@ git merge origin/master - to pull all the changes from the master to any other b
 "U" untracked which is not currently tracked by .git it should be moved to the stagging area 
 "C" both modified
 
-git branch -d branchName - it will delete the branch, but we should not be in this branch need to switch other branch and delete
+git branch -d branchName - it will delete the branch, but we should not be in this branch need to switch other branch and delete (local)
+git push origin --delete <branch name> - to delete the branch remotely 
 git checkout -b new_branchname - creating and switching to this new branch which is created
 git branch -m new_branchname - this will change the name of current branch name to new branchname
 git branch merge origin/branchname - merge the current changes to branch 
+
+git rm filename - to remove the specific file in git 
+git rm --cached - soft delete ? of files in git 
 
 git chekcout - is super cool thing where the deleted file can be restored back again and used to switch branchs also
 
@@ -362,6 +374,7 @@ one is keeping same as it is
 
 after the issue is done a new pull or merge reqeust is done comparing with source and destination branch to make merge the commits 
 
+git tag - 
 
 ip whitelist - ip whitelist which will denies and have control over the application web and apps. it is like restrictions
 where the web or apps can be only accessed, certian websites can be only accessed through certian network ip everything will be 
@@ -380,14 +393,18 @@ dynamic ip
 
 go-cd - for continous intergration and continous development which 
 which has two types 1. packaged pipeline 2. depolyment pipeline 
-packaged pipleine -
+
+packaged pipleine - it will download all the jars from the remote repository like nexus or mvn repository and package it into zip or whatever we mention in the
+pom for packaging type (jar, war, zip and pom)
+
 deployment pipeline -  
+
 first we need to create the pipleine based on what group(under) then pipleine will be named on the naming standards after that 
 what kind of version control should we need to use should mention ex: git, svn and mercurial and then mentioning git url or pulling the
 code and it will start to build it. As we define in the pom package would be jar or zip. There are automatic polling and manual polling 
-for this automatic polling is whenever we make changes in our project and pushed to central repositary the go-cd will pick it up and 
+for this automatic polling is whenever we make changes in our project and pushed to central repository the go-cd will pick it up and 
 start the build work(branchs should be mentioned to pull the code). Manual will be we have to trigger the code everytime whenever we make
-changes. After the package is build it will be published to the nexus repositary.
+changes. After the package is build it will be published to the nexus repository.
 creating the pipeline we need to mention which environment should comes under so the package will be pushed to the nexus according to that
 Template - is like set of rule how the build should happen when the pipeline is triggered there will be default template how the code should
 be build. we can also make how to run by writting shell scripting where to start and how to run the code, on what order it should execute
@@ -437,3 +454,44 @@ deconstructed packets and make into a single one.
 peer to peer ?
 nodes to cluster ?
 cluster?
+
+netstat - to check the network statictics 
+netstat -ano: to check for avaialable port to running currently in machine
+
+netsh wlan - to check the network and wireless connectivity details 
+
+vi - to open files and edit 
+
+q! without saving 
+wq! with saving 
+
+ls -l : in alphabetical order ascending order of file
+ls -lrt : ascending order according to timestamp of file 
+
+sudo su mule 
+
+
+headers in request - to send information like cookies and sending piece of information through the http headers 
+headers and body in http request ?
+
+learn more about vim 
+
+saxparseException - it happens while if there is something wrong in the xml structure or whitespace in the xml
+
+production releases versioning
+
+1.4.3
+1.Major - a major update will gives or change into new functionality gives enduser a better experience 
+4.minor - minor fixes are like 
+3.patch - defuct or bug fixes, security update 
+https://semver.org/
+MAJOR version when you make incompatible API changes,
+MINOR version when you add functionality in a backwards compatible manner, and
+PATCH version when you make backwards compatible bug fixes.
+https://en.wikipedia.org/wiki/Software_versioning
+
+sonarqube - for checking the code quality and standards checking 
+
+mule exams results 
+mule 4 - 603, 50.25
+mule 3 - 596, 47
