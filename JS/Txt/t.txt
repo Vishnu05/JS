@@ -227,6 +227,16 @@ group id - This is like super class which a unique id will be created in this an
 version id - version id is similar what version we need to use or download
 Maven is not just a dependency downloading thing it is more for build, develop, test, production
 
+Pom - This is where maven actually works, it is the heart of project and pom this is where all the build activities
+and testing is done 
+defining the 
+group id 
+artifact id
+version
+packaging
+plugin
+repository
+distributed management
 
 distributed and parallel systems 
 parallel systems - where the task can run at once, ex multitasking I suppose, Process are heavy, threads are light
@@ -345,6 +355,13 @@ incoming changes, accept current changes, accept both changes.
 accept both changes - it will merge both the changes from the remote and local
 accept incoming changes - changes made in remote are overwritten in local 
 accept current changes - changes made in local which are correct and good to go
+
+If we create an issue in github, gitlab or any other remote repository it will automatically create a new branch and assign the issue
+to this branch when it is done two things we can do on is deleting the branch after the merge or pull request is completed and another 
+one is keeping same as it is
+
+after the issue is done a new pull or merge reqeust is done comparing with source and destination branch to make merge the commits 
+
 
 ip whitelist - ip whitelist which will denies and have control over the application web and apps. it is like restrictions
 where the web or apps can be only accessed, certian websites can be only accessed through certian network ip everything will be 
