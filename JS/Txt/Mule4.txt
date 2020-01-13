@@ -199,3 +199,32 @@ munit mock  - it will bypass the flow and will return a value which we setup and
 proceed 
 mock basically will try to skip a component or flow according to our requirement. If we are trying to connect to externalize application and if we couldn't able to
 establish the connection we can use mock to skip the component or flow to bypass and return response should be set so it can do further tests
+
+system error - this is like checked exception but not exactly, this exception due to ports and other possible exception when the application start up so it cannot be 
+handled  
+
+messaging error 
+
+event source - event source where the application starts to kick off the application from the mule runtime this is where the application starts to work and trigger the flow or in java it can be said as 
+methos call, function call to invoke the function and to execute 
+event processing 
+
+workers 
+
+mule message - attributes and payload A
+variable - it comes under mule event not mule message to access them we need ask explictly
+
+by using vars we can get all the variable in the application
+
+runtime manager - for deploying the application 
+api manager - to set policy and other things, proxy, rate limiting, json threat policy protection and many other more policy can be set in api manager
+
+choice router - it will check based on the conditional statement and route to corresponding
+scatter gather - it will pass to all the route and will execute in parallelism (only concurrently not parallelism)
+
+queryparam, variable and payload are still accessiable when we pass from one flow to another flow using flow reference. But not checked with externalized systems and other 
+stuff 
+
+for http requester it is whole different story that payload is null query param is null only the variable have on the flow after coming it is getting lostsss
+
+error handling - when the subflow throws an error it has error propagte and the main flow has error continue then the main flow error handler will through or give the payload which error continue has
