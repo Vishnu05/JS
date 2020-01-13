@@ -465,8 +465,8 @@ netsh wlan - to check the network and wireless connectivity details
 
 vi - to open files and edit 
 
-q! without saving 
-wq! with saving 
+:q! without saving 
+:wq! with saving 
 
 ls -l : in alphabetical order ascending order of file
 ls -lrt : ascending order according to timestamp of file 
@@ -529,3 +529,16 @@ glup and grunt - for building the code and packaging testing, linting and other 
 tool like maven?
 
 streams - ???
+
+vim commands - to learn more about the vim editor
+https://mislav.net/2011/12/vim-revisited/
+https://coderwall.com/p/adv71w/basic-vim-commands-for-getting-started
+i insert mode - to edit 
+:q! to exit from the vim editor 
+:wq! to save and exit 
+
+
+commands to read a file in linux like terminal, bash
+head - for the first 10 lines
+less - this is for to read the whole file I suppose 
+https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Step_by_Step_Guide/s1-viewingtext-terminal.html
