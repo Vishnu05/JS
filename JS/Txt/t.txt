@@ -504,3 +504,12 @@ profiling - the recording and analysis of a person's psychological and behaviour
 certain sphere or to assis in identifying categories of people
 In software engineering, profiling is a form of dynamic program analysis that measures, for example, the space or time complexity of a program, 
 the usage of particular instructions, or the frequency and duration of function calls.Most commonly, profiling information serves to aid program optimization
+
+packaging in js - it is also similar to the build files like other programming language which is used to build the project, basically it will do bundle the whole 
+project into some kind of package with that package we can reuse the code or access
+(ex: in java like jar files and dependency so we can use the code from the jar)
+
+glup and grunt - for building the code and packaging testing, linting and other purpose for making the code to compile 
+tool like maven?
+
+streams - ???
