@@ -537,6 +537,11 @@ i insert mode - to edit
 :q! to exit from the vim editor 
 :wq! to save and exit 
 
+in bash 
+~ it will be till the users profile
+/ it will start from the beginning 
+cd ~, cd / will change the path accordingly 
+
 
 commands to read a file in linux like terminal, bash
 head - for the first 10 lines
