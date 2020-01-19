@@ -26,3 +26,13 @@ function check(params) {
 }
 
 check(1)
+
+/** Primitives and objects  */
+
+console.log('hi')
+console.log(true)
+console.log(10)
+
+/** Objects */
+console.log({})
+console.log([])
