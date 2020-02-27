@@ -343,6 +343,7 @@ git push origin --delete <branch name> - to delete the branch remotely
 git checkout -b new_branchname - creating and switching to this new branch which is created
 git branch -m new_branchname - this will change the name of current branch name to new branchname
 git branch merge origin/branchname - merge the current changes to branch 
+git push -d origin <branch_name> - to delete the branch in the remote 
 
 git rm filename - to remove the specific file in git 
 git rm --cached - soft delete ? of files in git 
@@ -362,7 +363,25 @@ git merge --abort - for stoping the mergering,
 merge conflicts happens whenever there is difference between local commit and remote commit it can be resolved by incoming changes
 by accepting it or rejecting it  when the local and remote overlaps with different commits where developers commits the code
 
-git reset --hard 
+To unchange the commits or to discard the commit, if we pushed some code wrongly we can go back and reset the changes by this 
+
+git reset --hard head~1 (number indicate the how many commits do you want to go back)
+git reset --soft head~1
+
+--soft will make uncommit the changes it still will be in stagging area 
+--hard will remove the changes and go back to the commit we want (to be very careful while doing this)
+
+git reset --soft <commit id, stash number>
+git reset --hard <commit id, stash number>
+
+git reset head <filename> to remove from the commited to stagging area 
+git reset head (discard all the(files) changes from commited area to stagging area)
+
+to update the local changes in remote it can be done forcefull
+
+git push -f origin master - force update to master 
+
+
 
 merge conflicts - the head is the incoming changes and after that current changes which we have made will decide to keep the 
 incoming changes, accept current changes, accept both changes.
@@ -547,3 +566,9 @@ commands to read a file in linux like terminal, bash
 head - for the first 10 lines
 less - this is for to read the whole file I suppose 
 https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Step_by_Step_Guide/s1-viewingtext-terminal.html
+
+nslookup - name server lookup used to identify the server and host name of system and domain (wrong need correction)
+
+
+sql 
+if the values are case sensetive how they are retrieve 
