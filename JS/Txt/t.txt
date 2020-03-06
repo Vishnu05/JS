@@ -572,3 +572,15 @@ nslookup - name server lookup used to identify the server and host name of syste
 
 sql 
 if the values are case sensetive how they are retrieve 
+
+linux commands - 
+
+to view the content in terminal
+less - to view the full content in terminal
+tail - 
+head - 
+
+cp filename destinationFolder/filename.format
+example: cp index.js src/main/ind.js
+
+chmod 777 file name to give the permissions 
