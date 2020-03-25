@@ -1,20 +1,83 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>General JS </title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    
-    
+
 </head>
+
 <body>
-    
+
     <p style="font-size: 20px">This is only for js play and not intended to use any other than js practise</p>
+    <div>
+        <button onclick="call()" type="submit">Click here to check</button>
+
+    </div>
+    <p id="ageCheck">You are only authorized for this game when you are above 18</p>
+
+    <div>
+        <button onclick="calc()" type="submit">Calculator</button>
+    </div>
 
 </body>
- <!-- <script src="/JS/Basics.js"></script> -->
- <!-- <script src="/js/tryCatch.js"></script> -->
- <script src="/JS/Dan/functions.js"></script>
+<!-- <script src="/JS/Basics.js"></script> -->
+<!-- <script src="/js/tryCatch.js"></script> -->
+<script src="/JS/Dan/functions.js"></script>
+
+<script>
+
+
+
+    let ageCheck = document.getElementById('ageCheck')
+
+    let call = () => {
+        let pro = prompt('what is your age')
+        if (pro != '') {
+            if (parseInt(pro)) {
+                if (pro > 18) {
+                    alert('you are good to go')
+                    ageCheck.innerHTML = 'You are happy to play'
+                } else {
+                    alert('try again after sometime')
+                    ageCheck.innerHTML = 'This game contains lot of voilence since your age is not upto our standards'
+                }
+            } else {
+                alert('excepted Numbers only')
+            }
+        } else {
+            alert('Value should not be empty.')
+        }
+    }
+
+    ageCheck.addEventListener("mouseover", () => {
+        ageCheck.innerHTML = 'hello Sundar'
+    })
+
+    ageCheck.addEventListener("mouseleave", () => {
+        ageCheck.innerHTML = ageCheck
+    })
+    console.log(ageCheck)
+
+    let fam = {
+        mom : 'amma',
+        dad: 'appa'
+    }
+
+    mom = null
+
+    console.log(fam)
+
+    function calc() {
+        alert("Addition with simple two values")
+        let val1 = prompt("enter the value 1")
+        let val2 = prompt("enter the value 2")
+
+        return alert(parseInt(val1) + parseInt(val2))
+    }
+
+</script>
+
 </html>

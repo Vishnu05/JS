@@ -1,6 +1,6 @@
 
 let a = {
-    name: 'cat',
+    name: 'cdat',
     age: 1.5,
     func() {
         //  alert('this example : ' + this.name)

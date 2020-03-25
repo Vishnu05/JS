@@ -13,7 +13,7 @@ let eleCret = document.createElement('label')
 eleCret.textContent = 'New element is created...'
 console.log(eleCret)
 console.log(nos)
- nos.appendChild(eleCret)
+nos.appendChild(eleCret)
 
 let ullist = document.getElementById('ullist')
 let adlist = document.createElement('li')
@@ -48,7 +48,7 @@ console.dir("ji")
 
 /** MouseEvent */
 
-let  s = document.getElementById('paras')
+let s = document.getElementById('paras')
 console.log(paras)
 
 paras.addEventListener('mouseover', () =>
