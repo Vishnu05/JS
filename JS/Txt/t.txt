@@ -569,7 +569,6 @@ https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/St
 
 nslookup - name server lookup used to identify the server and host name of system and domain (wrong need correction)
 
-
 sql 
 if the values are case sensetive how they are retrieve 
 
@@ -584,3 +583,33 @@ cp filename destinationFolder/filename.format
 example: cp index.js src/main/ind.js
 
 chmod 777 file name to give the permissions 
+pwd - print working directory 
+ls - list directory contents 
+ls -l - alphabetical order it will list down the files 
+ls -lrt - it will list down the on ascending order by time 
+clear - clear the terminal 
+exit - first it will comeback to home directory and then it will exit
+mkdir filename- create directory
+touch filename - create the files 
+touch filename1 filename2 filename3 - we can create multiple files at single stretch
+// deleting files in command line is different from deleting from the other option, when we delete it will go to the recycle bin so if this was 
+a mistake it can be recovered successfully. While in command line that is totally different that if we delete or remove it is permanent, recovering
+is a nightmare. these two commands should be executed very carefull
+rm - remove the files in working directory 
+rmdir - remove the directory 
+find - it is also listing down all the files in the directory - but not sure how to use it
+echo - it is a command which has string in it and string can be passed in the files and text
+echo "x" >	Echo	quickly print text to a file
+eg: echo "hello world! linux" > filename
+cat - to read the content in the terminal 
+less - a good command to read the file but there are other ways also to read the files
+cp file destination - used to copy the files
+cp -r one-directory another-directory - it used to copy all the content from of one directory to another directory
+cp	Copy	copy files
+cp -R	Copy Recursively	copy a directory and all its contents
+mv	Move	move (cut and paste) files and directories
+mv one-destination another-destination
+chmod - (change mode) changing permissions in files
+sudo - super user do - in terminal 
+whoami - will gives you the clarity and say which user you are currently
+dig - dns lookup - dig google.com - is listing down all the ip address 
