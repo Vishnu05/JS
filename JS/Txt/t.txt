@@ -281,6 +281,20 @@ load balancing - when a client send request to the server it will not hit direct
 each request (not) there will be more servers so it will go according to the alogorithm which server is good, health check for servers 
 which server is not facing downtime. checking the server whether it is running or not properly. if not request will not be re-routed to 
 the corresponding server untill that server is up and re-running again.
+https://www.citrix.com/en-in/glossary/load-balancing.html
+there are lot of alogorithms has been used in the load balancing technique 
+Round Robin – Requests are distributed across the group of servers sequentially.    
+Least Connections – A new request is sent to the server with the fewest current connections to clients. The relative computing capacity of each server is factored into determining which one has the least connections.
+Least Time – Sends requests to the server selected by a formula that combines the
+fastest response time and fewest active connections. Exclusive to NGINX Plus.
+Hash – Distributes requests based on a key you define, such as the client IP address or
+the request URL. NGINX Plus can optionally apply a consistent hash to minimize redistribution
+of loads if the set of upstream servers changes.
+IP Hash – The IP address of the client is used to determine which server receives the request.
+Random with Two Choices – Picks two servers at random and sends the request to the
+one that is selected by then applying the Least Connections algorithm (or for NGINX Plus
+the Least Time algorithm, if so configured).
+
 
 downtime - time during which a machine, especially a computer, is out of action or unavailable to use.
 throughput - the amount of material or items passing through a system or process 
@@ -577,14 +591,13 @@ linux commands -
 to view the content in terminal
 less - to view the full content in terminal
 tail - 
-head - 
+head
 
 cp filename destinationFolder/filename.format
 example: cp index.js src/main/ind.js
 
 chmod 777 file name to give the permissions 
-pwd - print working directory 
-ls - list directory contents 
+pwd - print working directory ls - list directory contents 
 ls -l - alphabetical order it will list down the files 
 ls -lrt - it will list down the on ascending order by time 
 clear - clear the terminal 
@@ -613,3 +626,4 @@ chmod - (change mode) changing permissions in files
 sudo - super user do - in terminal 
 whoami - will gives you the clarity and say which user you are currently
 dig - dns lookup - dig google.com - is listing down all the ip address 
+
