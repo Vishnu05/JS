@@ -82,6 +82,7 @@ console.log([...srt])
 /**
  * When a function has value and values are changed
  * the variables are changed outside the function and the value will reflect in that function
+ * it also work with lexical environment
  */
 let data = 'json'
 
@@ -92,6 +93,23 @@ function js() {
 data = 'Jeff dean'
 
 js();
+
+/** this is also a good example of closure asd per my understanding
+ * first the funtion call is happening and the value is assigned to x -> will be given to y; that function also
+ * has a parameter then again a function call is happening and this time y value is already stored and it add with x and
+ * execute as 5 + 4  = 9 
+ */
+function adding(x) {
+    return function (y) {
+        return x + y
+    }
+}
+
+let addx = adding(5)
+let addy = adding(10)
+
+console.log(addx(4))
+console.log(addy(10))
 
 //
 function dean() {
@@ -157,7 +175,7 @@ console.log('functoin call : ' + hoist(gh))
 var gh; //if we change to let the variable becames undefined 
 
 //anonymous function ?
-(function () {          
+(function () {
     console.log('lexical function ')
 })();
 console.log();

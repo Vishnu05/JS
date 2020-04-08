@@ -1,4 +1,5 @@
 
+/** Arrays is also a object there properties can be changed and modified */
 
 let obj = {
 
@@ -23,6 +24,7 @@ console.log()
 /**Push and Pop 
  * push - it will add a element in last array
  * pop - removes the last element in array 
+ * this is fast when compare to the shift and unshift; no need to re-arrange the whole array
 */
 let arr = ['hey', 32, { name: 23 }, function () { return 'array function' }]
 
@@ -48,7 +50,7 @@ console.log(arr)
  * sfit - (pop) similar but it will removes the element from first
  * unshift - (push) add element in first
  * these two are more costly when compared to pop & push 
- * each and every element has to be shifted accordinly 
+ * each and every element has to be shifted accordingly 
 */-
     arr.unshift('Jon doe'); console.log(arr); //arr.shift()
 //arr.length = 1; //truncating the array element by giving the size of array
@@ -59,7 +61,11 @@ delete arr[1]
 console.log(arr)
 
 
-/** Split and Splice */
+/** Split and Splice
+ * Splice - 
+ * Slice - 
+ * Split - 
+ */
 arr = ['split method in java script .']
 
 arr = ['we', 'are', 'listening', 'capgemini', 'india', 'chennai']
@@ -135,7 +141,7 @@ console.log(arr.map(x => x * 2))
 
 /** .map, filter, reduce 
  *  map can iterate over the object in array by the call back function 
- *  map methos creates a new array with calling of every new element
+ *  map methods creates a new array with calling of every new element
  *  Map is used to iterate all the elements by callBack function
  *  Reduce - 
  *  Filter - make  condtion and return values 
@@ -182,3 +188,14 @@ console.log(numbers.reduce((acc, ni) => acc + ni))
 console.log('filters function : ' + numbers.filter(numbers => numbers > 3))
 console.error('to print error message console.error() is used')
 
+/** Browsers are more matured when there is an empty array it eliminates all that and gives as empty and 
+ * only display which array have values 
+ */
+
+let arry = []
+arry[1] = 'Vishnu'
+arry[1000] = 'Thamizharasan'
+arry[343] = 'Capgmeini'
+console.log(arry)
+
+// Array.prototype.

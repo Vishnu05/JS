@@ -217,8 +217,8 @@ String - comparing string (equals method) or else it refer from the refernce and
 
 Maven - it is build tool for java and other purpose 
 Mainly used for dependency management for project 
-It has remote and local repositary, where remote repositary will have the all dependency to download, first it checks with the local repositary
-if there is no dependency in local repositary then it will automatically will download from the remote repositary
+It has remote and local repository, where remote repository will have the all dependency to download, first it checks with the local repository
+if there is no dependency in local repository then it will automatically will download from the remote repository
 Maven has many parts to do create, build, run, deploy 
 Pom - Project object Model, where all the configuration are made in this 
 Three important factor while creating dependency are
@@ -227,6 +227,24 @@ group id - This is like super class which a unique id will be created in this an
 version id - version id is similar what version we need to use or download
 Maven is not just a dependency downloading thing it is more for build, develop, test, production
 
+Pom - This is where maven actually works, it is the heart of project and pom this is where all the build activities
+and testing is done 
+defining the 
+group id 
+artifact id
+version
+packaging
+plugin
+repository
+distributed management
+maven target - where the source code(binaries) will be compiled it will have all the project builds and test when ever a project is run the war or zip will be generated
+in the target to build the project to deploy the code faster. Deleting the target folder also doesn't matter it will be fine. When we recompile it 
+(needs more improvising)
+where mvn clean will delete all the target files and regenerate the target source files and it will create a new source code in that folder
+classpath -
+
+mvn clean - it will delete the target file and recreate the source code to compile able one to run the application. 
+like snapshot for packaging jar, war, pom this able to run the code 
 
 distributed and parallel systems 
 parallel systems - where the task can run at once, ex multitasking I suppose, Process are heavy, threads are light
@@ -263,6 +281,20 @@ load balancing - when a client send request to the server it will not hit direct
 each request (not) there will be more servers so it will go according to the alogorithm which server is good, health check for servers 
 which server is not facing downtime. checking the server whether it is running or not properly. if not request will not be re-routed to 
 the corresponding server untill that server is up and re-running again.
+https://www.citrix.com/en-in/glossary/load-balancing.html
+there are lot of alogorithms has been used in the load balancing technique 
+Round Robin – Requests are distributed across the group of servers sequentially.    
+Least Connections – A new request is sent to the server with the fewest current connections to clients. The relative computing capacity of each server is factored into determining which one has the least connections.
+Least Time – Sends requests to the server selected by a formula that combines the
+fastest response time and fewest active connections. Exclusive to NGINX Plus.
+Hash – Distributes requests based on a key you define, such as the client IP address or
+the request URL. NGINX Plus can optionally apply a consistent hash to minimize redistribution
+of loads if the set of upstream servers changes.
+IP Hash – The IP address of the client is used to determine which server receives the request.
+Random with Two Choices – Picks two servers at random and sends the request to the
+one that is selected by then applying the Least Connections algorithm (or for NGINX Plus
+the Least Time algorithm, if so configured).
+
 
 downtime - time during which a machine, especially a computer, is out of action or unavailable to use.
 throughput - the amount of material or items passing through a system or process 
@@ -273,7 +305,7 @@ https://www.chromestatus.com/feature/5629709824032768
 
 ci/cd - continous intergration / continous deployment / continous delivery
 starting building the code after it is done unit test is done, but tdd is better; after unit test is done it will be commited to the
-central repositary(remote like github, gitlab, bitbucket) there will be some automation will be set of which is intergration testing 
+central repository(remote like github, gitlab, bitbucket) there will be some automation will be set of which is intergration testing 
 where all the developer will commit the code to remote and it will build the process.
 after doing this each time we commit the code to remote automatically build will start. continous deployment is also similar to this 
 where after committing it will be directly deployed in the production server. 
@@ -291,3 +323,307 @@ ex. when ever a new data/record found in the database it will eventually pick it
 pub/sub where social media like (fb, twitter, instagram, email promotion) when someone post a message it will broadcast to around millions 
 of people at the time data will be sent to them, Broadcasting can also be said there are lot of other things can be done by this (i don't know)
 this is read and write operation also can be done in this, messaging, storing, streaming and processing
+https://google.com/robot.txt ?? amazon also have this! it shows which need to be allowed and which needs to be disallowed 
+like links and other resources for web crawler. where google bot, and other search engine will not scan or index in there engine 
+
+proxy servers - it acts as a intermediate between the client and server, In computer networks, 
+a proxy server is a server that acts as an intermediary for requests from clients seeking resources from other servers
+
+dmz - demilitarized zone restricted access to the servers or databases to secure the data
+
+continuous function and discrete function
+continuous function - cro signal and sin wave is example of continuous singal in (ECE)
+discrete - are like digital 0's and 1's in form of graph 
+
+http-tunneling : HTTP tunneling is used to create a network link between two computers in conditions of restricted network connectivity 
+including firewalls, NATs and ACLs, among other restrictions. 
+The tunnel is created by an intermediary called a proxy server which is usually located in a DMZ.
+
+git:
+
+git branch -a used to see hidden branch 
+git checkout branchname 
+-- to make a change or pull latest commit from master branch to local --
+git fetch origin - no idea 
+git merge origin/master - to pull all the changes from the master to any other branches (like development or local etc..)
+
+"A" index has been added in the .git 
+"M" changes has been made in the existing files which need to be commited 
+"U" untracked which is not currently tracked by .git it should be moved to the stagging area 
+"C" both modified
+
+git branch -d branchName - it will delete the branch, but we should not be in this branch need to switch other branch and delete (local)
+git push origin --delete <branch name> - to delete the branch remotely 
+git checkout -b new_branchname - creating and switching to this new branch which is created
+git branch -m new_branchname - this will change the name of current branch name to new branchname
+git branch merge origin/branchname - merge the current changes to branch 
+git push -d origin <branch_name> - to delete the branch in the remote 
+
+git rm filename - to remove the specific file in git 
+git rm --cached - soft delete ? of files in git 
+
+adding multiple files rather than whole bunch of files
+git add <fileName1> <fileName2> etc...
+
+git chekcout - is super cool thing where the deleted file can be restored back again and used to switch branchs also
+
+git checkout "file name for recovering from the deleted"
+git checkout . used to recover all the deleted files but it should not be commited 
+
+to move to existing commit we can also use git checkout "commit id " first 8 digit is enough to move from one commit to another commit 
+and make changes and request for a merge 
+
+git merge --abort - for stoping the mergering, 
+merge conflicts happens whenever there is difference between local commit and remote commit it can be resolved by incoming changes
+by accepting it or rejecting it  when the local and remote overlaps with different commits where developers commits the code
+
+To unchange the commits or to discard the commit, if we pushed some code wrongly we can go back and reset the changes by this 
+
+git reset --hard head~1 (number indicate the how many commits do you want to go back)
+git reset --soft head~1
+
+--soft will make uncommit the changes it still will be in stagging area 
+--hard will remove the changes and go back to the commit we want (to be very careful while doing this)
+
+git reset --soft <commit id, stash number>
+git reset --hard <commit id, stash number>
+
+git reset head <filename> to remove from the commited to stagging area 
+git reset head (discard all the(files) changes from commited area to stagging area)
+
+to update the local changes in remote it can be done forcefull
+
+git push -f origin master - force update to master 
+
+
+
+merge conflicts - the head is the incoming changes and after that current changes which we have made will decide to keep the 
+incoming changes, accept current changes, accept both changes.
+<<<<< ==== HEAD "incoming changes from remote which needs to decided " === >>
+accept both changes - it will merge both the changes from the remote and local
+accept incoming changes - changes made in remote are overwritten in local 
+accept current changes - changes made in local which are correct and good to go
+
+If we create an issue in github, gitlab or any other remote repository it will automatically create a new branch and assign the issue
+to this branch when it is done two things we can do on is deleting the branch after the merge or pull request is completed and another 
+one is keeping same as it is
+
+after the issue is done a new pull or merge reqeust is done comparing with source and destination branch to make merge the commits 
+
+git tag - 
+
+ip whitelist - ip whitelist which will denies and have control over the application web and apps. it is like restrictions
+where the web or apps can be only accessed, certian websites can be only accessed through certian network ip everything will be 
+get rejected for security purpose
+
+ip blacklist - it is oppisite of whitelist which will allow control to sites most of the cases
+
+json threat protection - json threat protection is used to avoid or inject the json from nesting or data leak for security problem
+by this we can give object properties restrictions how many character should have lenght of the string can it be modified or not 
+this is primarly to avoid the security risk which can cause to attack (xml threat protection is also similar except the structure will
+be varying)
+
+static ip - 
+
+dynamic ip
+
+go-cd - for continous intergration and continous development which 
+which has two types 1. packaged pipeline 2. depolyment pipeline 
+
+packaged pipleine - it will download all the jars from the remote repository like nexus or mvn repository and package it into zip or whatever we mention in the
+pom for packaging type (jar, war, zip and pom)
+
+deployment pipeline -  
+
+first we need to create the pipleine based on what group(under) then pipleine will be named on the naming standards after that 
+what kind of version control should we need to use should mention ex: git, svn and mercurial and then mentioning git url or pulling the
+code and it will start to build it. As we define in the pom package would be jar or zip. There are automatic polling and manual polling 
+for this automatic polling is whenever we make changes in our project and pushed to central repository the go-cd will pick it up and 
+start the build work(branchs should be mentioned to pull the code). Manual will be we have to trigger the code everytime whenever we make
+changes. After the package is build it will be published to the nexus repository.
+creating the pipeline we need to mention which environment should comes under so the package will be pushed to the nexus according to that
+Template - is like set of rule how the build should happen when the pipeline is triggered there will be default template how the code should
+be build. we can also make how to run by writting shell scripting where to start and how to run the code, on what order it should execute
+the build 
+Build can be done by maven, ant and gradle which is more poplular 
+agents, jobs no idea 
+template -> stage -> jobs - where jobs will run the shell script 
+
+gson - it is devloped by the google to serialize and deserialize the java objects to json
+
+polyfill - is a peace of javascript code which can run on old browsers to give latest functionality which do not support natively
+
+repl - read eval and print loop 
+
+cookies - cookies will are special values where it store the site information in browser when ever a user ask for the website it doesn't need
+to know about all the details of webiste like language location whenever it loads it makes faster instead of searching all this again
+and details about what needs to be given to user. they go for cookies and it also play well with ad.
+https://policies.google.com/technologies/types
+when we ask for weather or some important about where we stay it helps us to give the result 
+for location related services they uses and track ip address from where they come from and give apporpirate response
+
+ad hoc - a decentralized network for mobile and web for wireless network 
+
+http status 
+200 this status is all about ok and successful
+300 
+400 client error 
+500 server error 
+for return response and other http responses it helps us to identify the request and to debug where the appilcation is getting error
+
+houseKeeping - it is process of optimization and keeping the backup files, disk clean up, defragmentation, scan disk, antivirus checkup
+whether the computer is running properly or not
+
+build - in computer programming building is the task where it will compile, test, generate binary code linting and packaging
+which can build the project up and run the application. for small application it can be compiled for larger one it is totally a 
+different story and managing that is hetic so here it comes the maven, gradle and npm to build the project. It combines all the code and
+able to deploy it in one stand to run the application (this is assumptions more research required)
+The term build may refer to the process by which source code is converted into a stand-alone form that can be run on a computer or to 
+the form itself. One of the most important steps of a software build is the compilation process, where source code files are converted
+into executable code.
+
+how the files are transfer through the internet? LAN and celluar device (radio waves)
+how they are serialize and deserialize when they communicate in internet, object or any other forms? 
+packages which will broke into small piece and send over the communication network and other will receive and reconstruct all the 
+deconstructed packets and make into a single one.
+
+peer to peer ?
+nodes to cluster ?
+cluster?
+
+netstat - to check the network statictics 
+netstat -ano: to check for avaialable port to running currently in machine
+
+netsh wlan - to check the network and wireless connectivity details 
+
+vi - to open files and edit 
+
+:q! without saving 
+:wq! with saving 
+
+ls -l : in alphabetical order ascending order of file
+ls -lrt : ascending order according to timestamp of file 
+
+sudo su mule 
+
+
+headers in request - to send information like cookies and sending piece of information through the http headers 
+headers and body in http request ?
+
+learn more about vim 
+
+saxparseException - it happens while if there is something wrong in the xml structure or whitespace in the xml
+
+production releases versioning
+
+1.4.3
+1.Major - a major update will gives or change into new functionality gives enduser a better experience 
+4.minor - minor fixes are like 
+3.patch - defuct or bug fixes, security update 
+https://semver.org/
+MAJOR version when you make incompatible API changes,
+MINOR version when you add functionality in a backwards compatible manner, and
+PATCH version when you make backwards compatible bug fixes.
+https://en.wikipedia.org/wiki/Software_versioning
+
+sonarqube - for checking the code quality and standards checking 
+
+mule exams results 
+mule 4 - 603, 50.25
+mule 3 - 596, 47
+
+what is state management in react ?
+ex: if there are five forms in some application at the end of the fifth page only the submit button is there where the data will be sent to db to update 
+the details of what ever the user has entered unfortunately the user refresh page at 4 will all the data be lost ?
+with help of state management we can preserve the user data to have a good user experience and customer need not to type the whole application again from
+the starting. Redux helps to solve this problem 
+here are few questions 
+how the state management works, does it takes the memory of browser to store the information?
+browser will have sessions if the browser close does it destory all the data or preserve?
+
+why code readablity is important ?
+we can write code as much as we want at the end it is going to work that is fine. the question is here will other developer can understand what the heck 
+you have written or they can maintain your code?
+if we working on some solution it must be simple precise and other developer must able to understand that is the good practise of writting a elegant code 
+and the software maintainablity will be easy or else it will be pain in ass 
+understanding complex gonna cost lot of time and sometimes other can't even understand so to avoid that code should be neat clean and other people should 
+understand this is good coder. It also should follow the time and space complexity for better optimization of code 
+
+profiling - the recording and analysis of a person's psychological and behavioural characteristics, so as to asses or predict their capabilities in a 
+certain sphere or to assis in identifying categories of people
+In software engineering, profiling is a form of dynamic program analysis that measures, for example, the space or time complexity of a program, 
+the usage of particular instructions, or the frequency and duration of function calls.Most commonly, profiling information serves to aid program optimization
+
+packaging in js - it is also similar to the build files like other programming language which is used to build the project, basically it will do bundle the whole 
+project into some kind of package with that package we can reuse the code or access
+(ex: in java like jar files and dependency so we can use the code from the jar)
+
+glup and grunt - for building the code and packaging testing, linting and other purpose for making the code to compile 
+tool like maven?
+
+streams - ???
+
+vim commands - to learn more about the vim editor
+https://mislav.net/2011/12/vim-revisited/
+https://coderwall.com/p/adv71w/basic-vim-commands-for-getting-started
+i insert mode - to edit 
+:q! to exit from the vim editor 
+:wq! to save and exit 
+
+in bash 
+~ it will be till the users profile
+/ it will start from the beginning 
+cd ~, cd / will change the path accordingly 
+
+
+commands to read a file in linux like terminal, bash
+head - for the first 10 lines
+less - this is for to read the whole file I suppose 
+https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Step_by_Step_Guide/s1-viewingtext-terminal.html
+
+nslookup - name server lookup used to identify the server and host name of system and domain (wrong need correction)
+
+sql 
+if the values are case sensetive how they are retrieve 
+
+linux commands - 
+
+to view the content in terminal
+less - to view the full content in terminal
+tail - 
+head
+
+cp filename destinationFolder/filename.format
+example: cp index.js src/main/ind.js
+
+chmod 777 file name to give the permissions 
+pwd - print working directory ls - list directory contents 
+ls -l - alphabetical order it will list down the files 
+ls -lrt - it will list down the on ascending order by time 
+clear - clear the terminal 
+exit - first it will comeback to home directory and then it will exit
+mkdir filename- create directory
+touch filename - create the files 
+touch filename1 filename2 filename3 - we can create multiple files at single stretch
+// deleting files in command line is different from deleting from the other option, when we delete it will go to the recycle bin so if this was 
+a mistake it can be recovered successfully. While in command line that is totally different that if we delete or remove it is permanent, recovering
+is a nightmare. these two commands should be executed very carefull
+rm - remove the files in working directory 
+rmdir - remove the directory 
+find - it is also listing down all the files in the directory - but not sure how to use it
+echo - it is a command which has string in it and string can be passed in the files and text
+echo "x" >	Echo	quickly print text to a file
+eg: echo "hello world! linux" > filename
+cat - to read the content in the terminal 
+less - a good command to read the file but there are other ways also to read the files
+cp file destination - used to copy the files
+cp -r one-directory another-directory - it used to copy all the content from of one directory to another directory
+cp	Copy	copy files
+cp -R	Copy Recursively	copy a directory and all its contents
+mv	Move	move (cut and paste) files and directories
+mv one-destination another-destination
+chmod - (change mode) changing permissions in files
+sudo - super user do - in terminal 
+whoami - will gives you the clarity and say which user you are currently
+dig - dns lookup - dig google.com - is listing down all the ip address 
+

@@ -57,8 +57,8 @@ var tw = document.getElementById('two')
 let sm = document.getElementById('sum')
 
 /** click
- * mouseenter
- * mouseleave
+ * mouseenter - when the cursor enter to element event is triggered
+ * mouseleave - when cursor leaves the element event is triggered 
  * mouseover // pinterleave does the same //
  * focus - when the cursor is placed in the element
  * keypress - keyboard events whenever a key is pressed event occurs //keyup ?? but it does same thing
@@ -173,11 +173,11 @@ inl.addEventListener('mouseover', () => console.log('inline element'))
 let blocks = document.getElementById('blo')
 blo.addEventListener('mouseover', () => console.log('block level element'))
 
-let ot=document.getElementById('ot').outerHTML='HTMLs'
+let ot = document.getElementById('ot').outerHTML = 'HTMLs'
 
-let op=document.body.firstChild
+let op = document.body.firstChild
 console.log(op)
-              
+
 console.log(window.outerHeight)
 document.write('DOM ' + navigator.userAgent + " ||| \n : " + navigator.platform + navigator.javaEnabled())
 
@@ -192,14 +192,14 @@ console.log(document.head)
 console.log(document.body)
 
 /* Nodes check */
-for(let i=0;i<document.body.childNodes.length;i++){
-   // console.log(document.body.childNodes[i])
+for (let i = 0; i < document.body.childNodes.length; i++) {
+    // console.log(document.body.childNodes[i])
 }
 
 console.log(document.body.parentNode === document.documentElement)
 
 for (let a of document.body.children) {
-   // console.log(a)
+    // console.log(a)
 };
 
 
@@ -207,4 +207,4 @@ for (let a of document.body.children) {
 let iht = document.getElementById('ihe').innerHTML = document.getElementById('iht').innerHTML  // ? why innerHTML
 console.log(iht)
 
-document.getElementById('att').style.color='red'
+document.getElementById('att').style.color = 'red'
