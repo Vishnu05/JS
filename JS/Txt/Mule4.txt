@@ -7,6 +7,8 @@ secured api and unsecured api:
 making request using securly - by passing the header client_id and cliend_secret
 v-core - processing platform 
 
+workers - 1 is the maximum in mule 
+
 rest api - are process api 
 connector - mostly rest api
 
@@ -222,9 +224,241 @@ api manager - to set policy and other things, proxy, rate limiting, json threat 
 choice router - it will check based on the conditional statement and route to corresponding
 scatter gather - it will pass to all the route and will execute in parallelism (only concurrently not parallelism)
 
-queryparam, variable and payload are still accessiable when we pass from one flow to another flow using flow reference. But not checked with externalized systems and other 
+queryparam, variable and payload are still accessible when we pass from one flow to another flow using flow reference. But not checked with externalized systems and other 
 stuff 
 
 for http requester it is whole different story that payload is null query param is null only the variable have on the flow after coming it is getting lostsss
 
 error handling - when the subflow throws an error it has error propagte and the main flow has error continue then the main flow error handler will through or give the payload which error continue has
+
+
+batch processing - it is very huge process and lot of things will happen when batch processing starts 
+input, load, process dispatch
+
+the data will be picked up by source, it can be ftp, db or any other system which contains data, the batch will poll frequently to check 
+whether if there is a new message or data has been posted in the source connected system and once data or message has been posted it will start 
+to poll
+input phase - ex: if there is an csv file and it conatins 10 records it will orgainze it will be written in a queue, all the data will be processed in the 
+initial phase. 
+batch step - it will process the record each by each and it will be delivered or written in another system 
+ex: the 10 csv records will be processed in batch step 10 times each record one by one, if there is another batch means 
+it will totally organize all the 10 records and give to next batch step. It will not happen in a squential manner 
+one record is taken from the input then it will be processed by batch step 1 and batch step 2 cannot process the same record at this time 
+batch step 1 has to completely finish whole process then batch step 2 can start porcessing 
+
+https://docs.mulesoft.com/mule-runtime/3.9/mule-message-structure
+
+mule 3 has different message structure while comparing to mule 4 
+
+message is the main object 
+message object has inbound properties and outbound properties, and payload
+inbound properties - which are immutable when ever a request is triggered the properties and values will be inbound 
+outbound properties - which we send the data and it is mutable it can be changed 
+flowvars, session vars can be gone out if it reaches the transport barrier 
+all the properties which outbound when reaches to next http lister or source place it will became new inbound properties 
+
+
+Scatter gather - if there are three flows in scatter gather all the request will go in parallel and finish the process 
+if there is an exception in either of the flow it still it will continue the process. after coming back to the main flow 
+it will throw an error in there and then application will fail
+
+if subflow has taken care for exception handling it will work and complete the flow fine 
+
+what is watermark in mulesoft ??
+
+repository in maven - where all the jar files is stored, when needed we can download over internet(naive explaination)
+
+plugin and dependency - plugin is used to complie the code something like that, where dependency used for our application to take
+that method or some library to use it in our application
+
+
+
+58c94fc14b424a4a89259de5c8047a52
+ED0207c364004eB38d27AE9EDb08Df4B
+
+curl "https://anypoint.mulesoft.com/icons/sprite-8.3.0.svg" ^
+  -H "Referer: https://anypoint.mulesoft.com/exchange/?organizationId=68ef9520-24e9-4cf2-b2f5-620025690913^&search=" ^
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36" ^
+  --compressed
+
+raml part is skipped for now? have to learn later
+
+we can even set how the response code and status should be present in http listener, it is a new feature in mule 4 
+
+what is the data type of Map - is it array, object, map or some other object
+
+whenever the message is posted in wmq 
+
+designing api specification
+exchange portal 
+synchornous call 
+
+errror handling - global assests, wmq we have to create own error handling 
+xml based it will have 
+it is not an reuseable api - all the fragments, library is only spefic to this application
+
+synchronous and asynchornous process? 
+
+soft token and hard token 
+
+mule expression function : {id : attributes.uriParams.ID}
+
+select * from american where ID = :id
+
+module 3 and 4 raml part have to restudy again
+
+can we apply policy in non raml project ? if not why what is the main reason of it 
+
+groupId:3f35a695-b5d5-4239-95c4-f95f26c2e153:assetId:helloworld
+
+Transport barrier - all the application payload, variables and other data will become null when it reaches to the next source 
+variable, attributes and payload
+
+variables - it is still accessible at the end of flow, ex: all the values crosses the transport barrier got lost and when the flow return to 
+main flow the variable which we have set is still accessible.
+
+payload - if we give just plain string it is working fine, other than that if we mix with expression it is throwing error 
+is this new feature in mule 4?
+and if we give more than one expression in the payload it is failing in the compile time and if it doesn't throw it throws error in 
+runtime 
+
+if a flow call a another http listener(requester if it is in process area) all the values will be become null, and in that flow 
+if there is payload or value has been set it will reterived and that data is accessible in the main flow (which called the another listener by requester)
+as for now only payload is accessible other than that all things became null
+when it reaches the transport barrier all it becames null, while going to next call(http listener via requester) when that flow ends only the payload value is
+accessible other than that all becomes null (I have only tested with payload and variable where varibale are not accessible)
+
+headers values which we set on the http listener are accessible after the flow ends (in http requester we set the value of headers)
+
+if the request timeout is exceeded in the http requester, increasing the timeout it will solve the problem. It is kind of call back mechanism
+
+Server not available to handle this request, either not initialized yet or it has been disposed.
+
+variable - now the access of varialble has been changed? when it cross the transport barrier it becames zero and when the flow ends and comes to the main flow 
+all the variable are still accessible. 
+
+payload are actual data and value which is passed over the internet in mule (payload is also generic term which is used for storing the data)
+
+vm connectors - it acts differently I can say that, 
+I guess it works on aysnchornously, after reaching to the vm publish the application runs on parallel (it is kind of queue mechanism)
+
+correlation id - 
+
+<---- IBM MQ design and architect ---->
+
+wmq cluster node - after posting the message it will come to the cluster point and where there will be two endpoint will be there and it is listening
+when if the one server is down other endpoint will be listening. In the server the message will be taken(not deleting it exactly but yes) so it is only one 
+time one message either it will take from endpoint 1 or endpoint 2, mostly the message will be taken from the endpoint which will be configured and has high 
+priority. 
+while writing it to the queue, I'm kind of stuck here 
+
+cluster and nodes ?? need to learn this 
+
+what is target variable? 
+
+Mule 4 message structure
+
+mule event - mule event stores all the information of message, payload and attributes #[mule]
+the parent of message (payload and attributes) and variables
+
+payload - get and post
+for get request all the data will be just gone in thin air like that, beacause we are reteriving the data all will be lost 
+while in POST method we have to send some data to endpoint, to the other server or anything, while in POST method payload will go and in GET method
+payload will be lost (thanks to sheetal)
+
+target value - is sent as paylaod, while it is in post method. I guess the target value will be the source system which we are trying to send the value to another 
+system 
+When creating a flow in a Mule app, you might need to store data in a variable so that any component in the flow can use it. Non-void operations
+(such as the Read operation to the File connector) can store the message data that they return in a variable. Once defined, variables created with the target parameter 
+are available for use within the flow, and you can access them like you access any other variable.
+
+debugger - when you have a paylod and the applicatoin runs in debugger mode, first payload will have a value and when it comes to the second payload at this 
+point what will be the value of the payload in debugger mode, first payload or second one
+
+payload - all the data and information, it will change from time to time. when ever a new payload is there it is getting replaced by the new one
+attributes - metadata of the request and other information, http, ftp and other protocol, all the metadata can be accessed. queryParams, uriParams, uripath etc...
+
+//good docs on mule site https://docs.mulesoft.com/mule-runtime/4.3/intro-error-handlers
+
+error handling - main advantage of error handling if a program is running and it should not be abruptly stop the flow of program and stop it 
+to avoid that we will handle the exception and give a valid response to client saying this is the root cause for this exception, can you try again
+with correct input
+
+on error propagate - this error will propagate and stop the flow 
+error arises in subflow, other than main flow it will handled and this component flow will throw an error in main flow, the component which is error 
+thrown futher program will not run
+
+on error continue - it will catch the error and run the rest of program
+if this is happen in subflow, or other flow, http call, other than main flow if the error conitue is handled it will catch the error and send the 
+payload to main flow and rest of the program will work fine. A very good way of handling the error 
+
+global error hanlding should be read more 
+
+it is kind of little bit lit and cool, when there is no error handling for flows and subflows, the default error hanlding will taken care of that but there is a catch
+that has to be on error continue or else the flow will stop the program.
+each time an error occurs in subflow, global on error continue takes control and execute the rest of the program in a very successful way
+if that is propagate it will fail at the first time and return the error response to main flow 
+
+what is active - pasvie node 
+and active - active node 
+
+data weave 
+lookup
+
+validation 
+the component check whether the condition is true or not 
+for example if the component has isNull, we can check or give condition that the value should be null(true) if the value has value the component
+will throw an error with our own description like validation failed. 
+if we don't specify the error message, mule will throw error like this 
+
+ERROR 2020-05-23 14:06:55,668 [[MuleRuntime].cpuLight.15: [questions-tryouts].isNull-payloadFlow.CPU_LITE @4f663144] [event: 76abc280-9cd0-11ea-85f0-94e6f7a961c8] org.mule.runtime.core.internal.exception.OnCriticalErrorHandler: 
+********************************************************************************
+Message               : java.lang.NoClassDefFoundError: org/mule/extension/validation/internal/ImmutableValidationResult.
+Error type            : MULE:FATAL_JVM_ERROR
+Element               : (None)
+Element XML           : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+********************************************************************************
+
+WARN  2020-05-23 14:06:55,680 [[MuleRuntime].cpuLight.15: [questions-tryouts].isNull-payloadFlow.CPU_LITE @4f663144] [event: 76abc280-9cd0-11ea-85f0-94e6f7a961c8] org.mule.runtime.core.api.context.notification.ServerNotificationManager: Notification not enqueued after ServerNotificationManager disposal: ExceptionNotification{action=exception, resourceId=null, serverId=null, timestamp=1590223015680}
+ERROR 2020-05-23 14:06:55,680 [[MuleRuntime].cpuLight.15: [questions-tryouts].isNull-payloadFlow.CPU_LITE @4f663144] [event: 76abc280-9cd0-11ea-85f0-94e6f7a961c8] org.mule.runtime.core.internal.exception.DefaultSystemExceptionStrategy: 
+********************************************************************************
+Message               : org/mule/extension/http/internal/listener/intercepting/NoInterception
+Error type            : (None)
+Element               : (None)
+Element XML           : (None)
+
+  (set debug level logging or '-Dmule.verbose.exceptions=true' for everything)
+
+filter 
+message enricher 
+for each 
+batch job 
+Watermark
+
+object store - it kind of feel cool, can store large data that is for sure, the 
+Values are preserved in object store and able to get all the details even if there is tranport barrier keys are used to only reterive the keys not values #[payload]
+I think the best way to preserve the values throughout the transport barrier is we can use object store which is super cool 
+all the values are reterived 
+https://dzone.com/articles/sharing-data-across-mule-applications
+
+Batch processing
+In the event that the application is redeployed or Mule crashes, the job execution is able to resume at the point it stopped.
+
+Honestly I love mulesoft now (23/05/20) it is really cool technology to leran I would encourge it to learn and try,
+docs of the mulesoft are really good and best.(docs has to be like that I understand lol)
+
+Publish consume: Synchronous. Publish: Asynchronous
+
+good way to learn anything is debugging mode it really helps a lot to understand how things are working 
+
+tdo - techinal data object 
+bdo - business data object
+
+traits, library 
+raml - needs more understanding on this 
+
+(naive example is downloading and uploading)
+upstream - 
+downstream -  
