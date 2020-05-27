@@ -677,3 +677,9 @@ vs code - default font - Consolas, 'Courier New', monospace
 
 environment variable - an environment variable is a dynamic-named value that can affect the way running process will behave on a computer
 They are part of the environment in which a process runs
+
+
+smoke test - also know as build verification testing is a type of software testing that comparises of a non-exhaustive set of tests that aim at ensuring
+that the most important function work. The result of this testing is used to decide if a build is stable enough to proceed further testing 
+
+cidr - Classless Inter-Domain Routing
