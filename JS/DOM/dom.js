@@ -111,7 +111,7 @@ function oncha() {
 
     let OnCh = document.getElementById('onch')
     //    document.getElementById('ochane').innerHTML = `Charecter length : ${OnCh.value.length}`
-    OnCh.addEventListener('mouseenter', () => {
+    OnCh.addEventListener('keypress', () => {
         console.log(OnCh.value + " : Charecter length : " + OnCh.value.length)
         document.getElementById('ochane').innerHTML = `Values are : ${OnCh.value.toUpperCase()}`
     }
@@ -128,6 +128,8 @@ function onf() {
 function paf() {
     let pav = document.getElementById('popid')
     console.log(pav)
+    alert('hello')
+
 
     pav.addEventListener('mouseover', () => {
         alert('Yo you touched it!')
@@ -183,11 +185,14 @@ document.write('DOM ' + navigator.userAgent + " ||| \n : " + navigator.platform 
 
 document.body.style.background = ''
 
+/** This gives the basic information about the site like domain name, protocol and other stuff */
 console.log(location)
 
 console.log(document.body)
 
+/** It is similar to the document where we can get all details of the dom */
 console.log(document.documentElement)
+console.log(document)
 console.log(document.head)
 console.log(document.body)
 
