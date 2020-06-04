@@ -454,6 +454,13 @@ after the issue is done a new pull or merge reqeust is done comparing with sourc
 
 git tag - 
 
+To abort the merge changes 
+(fix conflicts and run "git commit")
+(use "git merge --abort" to abort the merge)
+
+I have noticed that if a person commit a changes in github, if the account(emailid) is not assoicated with github account. In the contribution graph it doesn't 
+show up the new changes has been made. Only repository will mention that there is some changes has been made.
+
 ip whitelist - ip whitelist which will denies and have control over the application web and apps. it is like restrictions
 where the web or apps can be only accessed, certian websites can be only accessed through certian network ip everything will be 
 get rejected for security purpose

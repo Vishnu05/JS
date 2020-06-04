@@ -21,7 +21,7 @@ class Cls {
         console.log('constructor ' + name)
     }
 
-    /** JS can have only one constructor */
+    /** JS can have only one constructor or else it will thrown an error */
     /* constructor(name, cl) {
         console.log('second constructor')
      }*/
@@ -34,3 +34,23 @@ class Cls {
 
 let ob = new Cls('Vishnu')
 
+let number = 23.3
+
+/** To check the type  */
+console.log(typeof number)
+
+class jsClass {
+
+    /** Constructor will get the parameters and it will be set to firstname */
+    constructor (name) {
+        this.firstName = name
+    }
+
+    getName() {
+        /** the value will be directly accessed by this.firstName */
+        console.log(this.firstName)
+    }
+}
+
+let value = new jsClass("Vishnu Thamizharasan")
+value.getName()
