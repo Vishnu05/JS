@@ -400,6 +400,9 @@ to move the commits from staged to unstaged
 git restore --staged filename
 git restore --staged .
 
+git submodule - want to look on this 
+https://git-scm.com/book/en/v2/Git-Tools-Submodules
+
 warning: user.name has multiple values
 error: cannot overwrite multiple values with a single value
        Use a regexp, --add or --replace-all to change user.name.
@@ -452,7 +455,15 @@ one is keeping same as it is
 
 after the issue is done a new pull or merge reqeust is done comparing with source and destination branch to make merge the commits 
 
-git tag - 
+git tag -  while the application is going for live we can use tag version to identify 
+
+git tag <taganme> - git tag v1.1 - it will create a new tag in git 
+git tag <tagname> -a : git tag v1.2 "message for this release"
+git tag -d <tagname> - git tag -d v1.3 it will delete the tag name from git repository 
+git tag - it will list down all the tags in the git repository
+git push origin --tags - push all the tags to remote repository
+git push origin tag <tagname> - git push origin tag v1.4 - this will push only specific tag to the remote repository 
+git push -d origin <tagname> - to delete the tag in remote repository 
 
 To abort the merge changes 
 (fix conflicts and run "git commit")
