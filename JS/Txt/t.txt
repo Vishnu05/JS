@@ -455,15 +455,30 @@ one is keeping same as it is
 
 after the issue is done a new pull or merge reqeust is done comparing with source and destination branch to make merge the commits 
 
-git tag -  while the application is going for live we can use tag version to identify 
+git tag - (Histrorical point)  while the application is going for live we can use tag version to identify 
+ex: login page it is going for production with release version v1 and some bugs and improvements are made in the code for faster 
+and other good ui. there is 10 commit has been pushed to remote
+with the new release tag we can annotate the version to v1.1. Two release will identify that this changes has been made.
+form point to point. This code has pushed till this release and this code pushed for this release
+in the remote repository the code will be avaialable in zip format to deploy in server 
+tag help to identify the code and release what are the improvements made
+and comparision can be done what are the changes has been made from release v1 to v2 
 
 git tag <taganme> - git tag v1.1 - it will create a new tag in git 
 git tag <tagname> -a : git tag v1.2 "message for this release"
 git tag -d <tagname> - git tag -d v1.3 it will delete the tag name from git repository 
 git tag - it will list down all the tags in the git repository
 git push origin --tags - push all the tags to remote repository
+git push --tags - push all tags to remote
 git push origin tag <tagname> - git push origin tag v1.4 - this will push only specific tag to the remote repository 
 git push -d origin <tagname> - to delete the tag in remote repository 
+git tag --delete <tagname> - to delete a specific tag
+git tag -d <tagname> <tagname> ... etc - git tag -d v1.2 v1.3 - to delete multiple tag at once 
+git tag <tagname> -a -m "message for this tag" - git tag v1.5 -a -m "bug fixes and patches for this release"
+tag without annotated are lightweight, and with annotated a heavy and it also contains the message of tag release
+git show <tagname> - git show v1.1 - it will list down the detailed explaination of the tag
+git tag <tagname> <commitID> - git tag v0.1 352nh54 - this is where we can go and create tag from the past 
+or if we want to create a tag go back in time with commit id and by this we can do 
 
 To abort the merge changes 
 (fix conflicts and run "git commit")
@@ -749,3 +764,22 @@ that the most important function work. The result of this testing is used to dec
 
 cidr - Classless Inter-Domain Routing
 
+---- 
+after development create a release branch , trigger the build pipeline which will create sonar report and upload the package to Nexus
+and after that we are delivering package for deployment
+yes i did
+after scope is defined for any build development , we have to take release branch and before giving it for deployment , 
+we need to create a tag and *-Release.zip file
+this is all done using one GoCd pipeline
+which is having two stages 1. Prepare 2. Perform
+in Prepare stage it will removes the -Snapshot from the Pom file version and create a tag and commit it to bitbucket ,
+and creates new incremented Snapshot version for the API  then commits in bitbucket
+and in Perform , it will create a -Release.zip package in nexus
+its maven release only.. same way it is done in Java
+but here we have given all the steps in GoCd pipeline to automate it
+and incremented Snapshot POM version
+
+maven plugin which can increment the pom version
+when tag and release pipeline is triggered, a tag version will be created by the gocd in bitbucket, it removes the snapshot and deploy the 
+zip file to nexus and, after that pom version will be automatically incremented by one
+this is good

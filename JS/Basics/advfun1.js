@@ -1,5 +1,13 @@
 
 
+console.log('SetTimeout function start ...')
+
+setTimeout( () => {
+    console.log('After all the main function complete then event loop pushes the function to call stack ...')
+}, 0)
+
+console.log('SetTimeout function ends........')
+
 //window properties
 console.log(window.innerHeight)
 
@@ -40,7 +48,7 @@ function call1() {
     function call2() {
 
         function call3() {
-            return 'callback functions'
+            return 'Function call and callback functions'
         }
 
         return call3();
@@ -76,7 +84,7 @@ let st = function () {
  */
 function times() {
     return setTimeout(function () {
-        // alert('no way ..')
+         console.log('no way ..')
     }, 2000)
 }
 
