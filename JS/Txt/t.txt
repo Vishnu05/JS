@@ -431,6 +431,15 @@ disadvantages are while working with many developers and opensource it is hard t
 what new feature has made it can mess a lot have to be carefull here 
 
 git rebase branch_name - it will take the commit from that feature branch and add commits top of master 
+git rebase --continue
+git rebase --skip
+git rebase --abort - to abort the changes of current git rebase 
+
+git rebase -i head~3 - git interactive this is squash command, where it will combine the git commits 
+git rebase -i head~<number> number where how many commits should be merged into one
+
+git log --oneline - it will show the only git log commits
+git log - shows the whole log id and full details 
 
 there are 3 commits in experiment branch and it has been updated in the local repository 
 and now rebasing it will push all the three commit at top of master then push it to remote 
@@ -441,6 +450,23 @@ then push the experiment branch now all are in same page and same track
 need more practise on this 
 https://www.youtube.com/watch?v=f1wnYdLEpgI
 wonderful example is explained in this video 
+
+/** git squash */
+https://www.youtube.com/watch?v=V5KrD7CmO4o - good tutorial
+
+git squash is combining many commits into single one, when developing some code in feature branch and there is many commits are made
+and if we want to combine into one commit then git squash is the perfect solution
+
+git rebase -i head~3 we are telling the head to combine the last three commit
+first it will ask what we need to squash and what we need to pick and after that final commit message we want to give 
+
+
+/** rewrite the history */
+https://www.themoderncoder.com/rewriting-git-history/
+https://www.youtube.com/watch?v=ElRzTuYln0M - really awesome video explainations 
+
+git rebase -i head~1 - this is super cool command, where we can do a lot of things with git, changing the commit, deleting and many
+more options are available
 
 merge conflicts - the head is the incoming changes and after that current changes which we have made will decide to keep the 
 incoming changes, accept current changes, accept both changes.
@@ -460,7 +486,7 @@ ex: login page it is going for production with release version v1 and some bugs 
 and other good ui. there is 10 commit has been pushed to remote
 with the new release tag we can annotate the version to v1.1. Two release will identify that this changes has been made.
 form point to point. This code has pushed till this release and this code pushed for this release
-in the remote repository the code will be avaialable in zip format to deploy in server 
+in the remote repository the code will be available in zip format to deploy in server 
 tag help to identify the code and release what are the improvements made
 and comparision can be done what are the changes has been made from release v1 to v2 
 
@@ -580,7 +606,7 @@ nodes to cluster ?
 cluster?
 
 netstat - to check the network statictics 
-netstat -ano: to check for avaialable port to running currently in machine
+netstat -ano: to check for available port to running currently in machine
 
 netsh wlan - to check the network and wireless connectivity details 
 
@@ -666,7 +692,9 @@ cd ~, cd / will change the path accordingly
 
 commands to read a file in linux like terminal, bash
 head - for the first 10 lines
-less - this is for to read the whole file I suppose 
+less - this will read according to the size of terminal, we can continue to read by pressing enter key, or want to exit the file 
+reading, pressing the 'q' will exit from the command
+cat - it will read the whole file in terminal  
 https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Step_by_Step_Guide/s1-viewingtext-terminal.html
 
 nslookup - name server lookup used to identify the server and host name of system and domain (wrong need correction)
