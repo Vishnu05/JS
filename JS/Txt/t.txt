@@ -468,6 +468,12 @@ https://www.youtube.com/watch?v=ElRzTuYln0M - really awesome video explainations
 git rebase -i head~1 - this is super cool command, where we can do a lot of things with git, changing the commit, deleting and many
 more options are available
 
+git bisect - 
+git hooks - ?
+
+git add -A 
+git add . - both of them are do the same thing, but there will be a difference need to find that out
+
 merge conflicts - the head is the incoming changes and after that current changes which we have made will decide to keep the 
 incoming changes, accept current changes, accept both changes.
 <<<<< ==== HEAD "incoming changes from remote which needs to decided " === >>

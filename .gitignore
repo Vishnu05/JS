@@ -2,3 +2,5 @@
 .vscode
 /webpacktut/node_modules
 webpacktut/dist
+
+webpacktut/package-lock.json
