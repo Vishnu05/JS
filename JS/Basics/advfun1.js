@@ -184,8 +184,12 @@ let objs = {
     liscence: 'open source',
     lang_supt: ['js', 'html', 'css', 'python', 'mostly for forntend'],
     intelsence: 'true',
-    git: 'support gitlens is better extension'
+    git: 'support gitlens is better extension',
+    a: 'does it comes in ascending order ?'
 }
+
+console.log('json object : ' , objs)
+console.log(objs)
 
 //console.log(Array.forEach(objs))
 console.log(objs.lang_supt.forEach)
