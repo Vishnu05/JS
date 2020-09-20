@@ -1,5 +1,7 @@
 
-/** creating element  */
+/** creating element in Dom */
+
+/** More examples should be done, Element.js has some good exmaples */
 
 let butt = document.getElementById('but')
 
@@ -30,6 +32,7 @@ function addElement() {
     // appending the textnode to the button element 
     but.appendChild(content)
 
+    // inserting the node in the dom body, and specifiying where it needs to be inserted
     document.body.insertBefore(but, butt)
 
 }
