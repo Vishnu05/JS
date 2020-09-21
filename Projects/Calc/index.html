@@ -5,41 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
-    <div>
+    <div class="container">
         <label>
             <h1>Calculator</h1>
         </label>
-        <span>
-            <input type="text" id="first" placeholder="first value" required>
+        <span class="input-group mb-3">
+            <input type="number" id="first" onkeyup="disableButton()" placeholder="first value" required>
         </span>
-        <span>
-            <input type="text" name="" id="second" placeholder="second value" required>
+        <span class="input-group mb-3">
+            <input type="number" name="" id="second" onkeyup="disableButton()" placeholder="second value" required>
         </span>
 
 
         <br><br>
         <div>
             <span>
-                <button onclick="add()" type="submit">Addition</button>
+                <button id="add" class="btn btn-primary" onclick="add()" type="submit">Addition</button>
             </span>
             <span>
-                <button onclick="sub()" type="submit">Subtraction</button>
+                <button id="sub" class="btn btn-secondary" onclick="sub()" type="submit">Subtraction</button>
             </span>
             <span>
-                <button onclick="div()" type="submit">Division</button>
+                <button id="div" class="btn btn-success" onclick="div()" type="submit">Division</button>
             </span>
             <span>
-                <button onclick="mul()" type="submit">Mulitplication</button>
+                <button id="mul" class="btn btn-info" onclick="mul()" type="submit">Mulitplication</button>
             </span>
         </div>
         <br><br>
 
         <div id="ans">
-         
+
         </div>
     </div>
 
