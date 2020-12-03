@@ -47,4 +47,33 @@ try {
     console.log(e.stack)
 }
 
- 
+
+// Error handling with class 
+
+class Error {
+
+    age() {
+        throw 'error is thrown '
+    }
+}
+
+
+
+let ob = new Error
+// console.log('Error method ', ob.age())
+
+console.log('hi how are ')
+
+let age = document.getElementById('Value')
+console.log('Age value is : ', age)
+function ageCheck() {
+
+    if (age.value > 18) {
+        alert('You are qualified for voting ')
+        console.log('Allowed')
+    } else {
+        return ageCheck(age.value = prompt('Try again'))
+
+    }
+}
+
