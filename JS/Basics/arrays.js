@@ -165,6 +165,11 @@ let reduceFun = [{ salary: 1000, id: 3, currentlyEmployed: true, name: 'Abc' },
 { salary: 60000, id: 22, currentlyEmployed: false, name: 'fb' }
 ]
 
+// using key value pair 
+
+console.log(reduceFun.map((key, value) => {
+    console.log(" Key value pair in Map : ", key, value)
+}))
 
 /** getting all the salary  */
 console.log(reduceFun.map(reduceFun => reduceFun.salary))
@@ -199,3 +204,40 @@ arry[343] = 'Capgmeini'
 console.log(arry)
 
 // Array.prototype.
+
+// nested Array object 
+
+console.log('----------------------------------------')
+
+nestedArray = [
+    {
+        id: 1, laptop: 'hp', os: [
+            { id: 1, family: 'windows', arch: [{ type: '64 bit' }, { type: '84 bit' }] },
+            { id: 2, family: 'linux', arch: [{ type: '64 bit' }, { type: '84 bit' }] },
+            {
+                id: 2, laptop: 'dell', os: [
+                    { id: 1, family: 'windows' },
+                    { id: 2, family: 'linux' }]
+            },
+            {
+                id: 3, laptop: 'accer', os: [
+                    { id: 1, family: 'windows' },
+                    { id: 2, family: 'linux' }]
+            }
+        ]
+    }
+]
+
+console.log('Nested Array : ', nestedArray)
+
+let nested = nestedArray.map((key) => {
+    console.log('key ', key)
+    console.log('Second object : ', key.os)
+    key.os.map((val) => {
+        console.log('Second object values : ', val.family)
+        val.arch.map((third) => {
+            console.log('Third obeject value : ', third.type)
+        })
+    })
+
+})

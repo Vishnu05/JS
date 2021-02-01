@@ -29,3 +29,13 @@ console.log(promise1)
 /** This is example for another modules  */
 
 export let examp = 'why fetch are better than promises'
+
+// promise are asynchronous request 
+
+function getName(name) {
+    return name
+}
+
+// let promise = new Promise((resolve, reject) => {
+//     .then(getName('hello'))
+// })
