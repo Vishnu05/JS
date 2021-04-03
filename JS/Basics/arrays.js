@@ -233,6 +233,8 @@ console.log('Nested Array : ', nestedArray)
 let nested = nestedArray.map((key) => {
     console.log('key ', key)
     console.log('Second object : ', key.os)
+
+    // second, third or nth etc. by this we can extract the neted data I guess 
     key.os.map((val) => {
         console.log('Second object values : ', val.family)
         val.arch.map((third) => {
