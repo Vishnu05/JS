@@ -15,6 +15,10 @@ console.log(ob.func())
 
 let map = new Map()
 
+/** 
+ *  Map is a data structure which store key value pairs
+ */
+
 map.set(1, 34)
 map.set('a', ob)
 map.set(true, false)
@@ -46,6 +50,10 @@ in iterates key */
 for (let a of pam.entries()) { // iterates both (value and key)
     console.log(" Entries : " + a)
 }
+
+/**
+ * Set is a datastructure which stores only unique values
+ */
 
 let set = new Set();
 
@@ -128,3 +136,60 @@ let json = JSON.stringify(val);
 //let js=JSON.parse(val);
 console.log(json)
 
+
+/** js Array methods  */
+let emp = [
+    { id: 1, empName: 'john' },
+    { id: 2, empName: 'white' },
+    { id: 3, empName: 'david' },
+    { id: 4, empName: 'clarke' },
+]
+
+let empSome = emp;
+
+// console.log("array of emp : ", emp)
+
+emp = emp.filter((i) => {
+    console.log(i.empName !== 'white')
+    return i.empName !== 'white'
+})
+
+console.log(" after filter ", emp)
+
+emp = emp.map((i) => {
+    console.log(" map ", i.empName !== 'white')
+    return i.empName !== 'david'
+})
+
+/**
+ * Some method: it will check the element in the object and return whether it is present or now
+ * it will not modify the array 
+ * cheking values in the array
+ */
+
+const isPresent = empSome.some((i) => {
+    // it returns all the element like map
+    console.log('some method ', i)
+    return i.empName === 'david'
+})
+
+// stackover flow answer inspired
+
+if (isPresent) {
+    let newNode = document.createElement('p')
+    let text = document.createTextNode('Some method finded out successfull')
+    newNode.style.color = 'red'
+
+    newNode.appendChild(text)
+    document.body.append(newNode)
+}
+
+console.log('Some method value checking : ', isPresent)
+
+if (emp.some) {
+    // alert('hello')
+    console.log(" helllllllllllllllll")
+} else {
+    console.log(" Nooooooooooooooooo")
+}
+console.log("after map ", emp)
